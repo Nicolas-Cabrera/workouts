@@ -1,0 +1,16 @@
+.Sign-Up-Page {
+	height: 100vh;
+	background-image: url('../../img/bg.jpg');
+	background-position-x: -110px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.signup-text {
+	padding-top: 150px;
+	color: white;
+}
+
+.google {
+	margin-top: 60px;
+}
