@@ -15,7 +15,7 @@ function App() {
 			<Test />
 
 			<GoogleLogin
-				clientId="436450418933-1gb19igjut0e2s2dag5g7vpq7ink236p.apps.googleusercontent.com"
+				clientId="436450418933-l94fngjjubjdqajp88d6rpkh7o5lira5.apps.googleusercontent.com"
 				buttonText="Login"
 				onSuccess={responseGoogle}
 				onFailure={responseGoogle}
