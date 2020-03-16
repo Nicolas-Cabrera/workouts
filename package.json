@@ -15,7 +15,7 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-	"start": "npm-run-all -s build start-backend",
+	"start": "NODE_ENV=production npm-run-all -s build start-backend",
 	"start-dev": "npm-run-all -p start-frontend start-backend",
     "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/Backend/app.js",
