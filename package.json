@@ -16,7 +16,7 @@
   },
   "scripts": {
 	"start": "NODE_ENV=production npm-run-all -s build _start_heroku_backend",
-	"_start_heroku_backend": "node src/backend/app.js",
+	"_start_heroku_backend": "node src/Backend/app.js",
 	"start-dev": "npm-run-all -p start-frontend start-backend",
     "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/Backend/app.js",
