@@ -1,14 +1,17 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
+const db = require('./dbconnection');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
-const getTest = require('./test');
 
-app.get('/rest/movies', (req, res) => {
-	res.send(getTest());
-}); 
 
 app.use(express.static(path.join(__dirname, '../../build')));
+
+app.get('/test', (req, res) => {
+	res.send('Test');
+});
 
 app.get('/', (req, res) => res.send('Hello welcome to the backend!!'));
 
