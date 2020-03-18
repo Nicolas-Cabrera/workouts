@@ -1,0 +1,22 @@
+.Register {
+	height: 100vh;
+	background-image: url('../../img/rg-bg.jpg');
+	background-position-x: -250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.reg-form {
+	padding: 60px 10px;
+	color: white;
+	filter: none;
+}
+
+form {
+	padding: 20px;
+}
+
+input {
+	margin: 10px;
+	padding: 10px;
+}
