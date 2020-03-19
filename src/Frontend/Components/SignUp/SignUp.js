@@ -13,7 +13,7 @@ export default function SignUp() {
 		console.log(user);
 	}
 
-	if(user === '') {
+	//if(user === '') {
 		return (
 			<div className="Sign-Up-Page">
 				<div className='signup-text'>
@@ -29,7 +29,7 @@ export default function SignUp() {
 				/>
 			</div>
 		);	
-	} else {
-		return <Redirect to='/Register' />
-	}
+	// } else {
+	// 	return <Redirect to='/Register' />
+	// }
 }
