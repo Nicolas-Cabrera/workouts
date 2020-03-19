@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 
-const url = "mongodb+srv://nico:<password>@workout-2530w.mongodb.net/test?retryWrites=true&w=majority";
+const url = "mongodb+srv://nico:Nico1216@workout-2530w.mongodb.net/test?retryWrites=true&w=majority";
 const dbName = 'Workout';
 
 module.exports = function connect() {

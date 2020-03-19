@@ -7,14 +7,17 @@ export default function Register() {
 		<div className='Register'>
 			<div className='reg-form'>
 				<h1>Enter body measurements</h1>
-				<form>
-					<input type='text' placeholder='Gender' /><br/>
-					<input type='number' placeholder='Age' /><br/>
-					<input type='number' placeholder='Height' /><br/>
-					<input type='number' placeholder='Weight' /><br/>
-					<button>Start Training</button>
+				<form method='POST' action='/formAction'>
+					<select name='gender' type='text' >
+						<option>Male</option>
+						<option>Female</option>
+					</select><br/>
+					<input name='age' type='number' placeholder='Age' /><br/>
+					<input name='height' type='number' placeholder='Height' /><br/>
+					<input name='weight' type='number' placeholder='Weight' /><br/>
+					<input type='submit'></input>
 				</form>
 			</div>
 		</div>
 	);
-}
+}	
