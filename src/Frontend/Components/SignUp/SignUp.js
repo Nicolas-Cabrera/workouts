@@ -20,7 +20,7 @@ export default function SignUp() {
 					<h1>Welcome To The Ultimate Workout Buddy</h1>
 					<h3>Login in using Google to record your workouts and see you stats</h3>
 				</div>
-				<GoogleLogin className='google'
+				<GoogleLogin
 					clientId="128697914657-ne1lqnda31g26ajchb05dlm2sh0n8336.apps.googleusercontent.com"
 					buttonText="Login"
 					onSuccess={responseGoogle}
