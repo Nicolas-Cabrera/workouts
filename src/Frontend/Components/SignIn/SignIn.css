@@ -6,8 +6,16 @@
 	background-size: cover;
 }
 
-.signup-text {
-	padding-top: 150px;
+.Link {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.signin-text {
+	padding-top: 100px;
 	color: white;
 }
 
