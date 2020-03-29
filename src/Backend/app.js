@@ -13,6 +13,13 @@ db.connect().then(dbo => {
 		res.send('Hello welcome to the backend of this app');
 	});
 
+	app.get('/users', (req, res) => {
+		dbo.collection('PersonalData').find({}).toArray((err, results) => {
+			if(err) throw err;
+			res.send(results);
+		})
+	})
+
 	app.post('/login', (req, res) => {
 		dbo.collection('PersonalData').find({
 			username: req.body.username, 
