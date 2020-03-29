@@ -5,6 +5,13 @@ require('dotenv').config();
 const url = process.env.DB_URL_PRD;
 const dbName = 'Users';
 
+const url = process.env.NODE_ENV === 'production' ? 
+	process.env.DB_URL_PRD : 
+	process.env.DB_URL_DEV;
+const dbName = process.env.NODE_ENV === 'production' ?
+	'hheroku_tkxqqwvs' : 
+	'kodflix';
+
 module.exports = { connect }; 
 
 function connect() {
