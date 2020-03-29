@@ -28,16 +28,8 @@ db.connect().then(dbo => {
 	});
 
 	app.post('/formAction', (req, res) => {
-		console.log('Form object is:', req.body);
 		dbo.collection('PersonalData').insertOne(req.body);
 	})
-
-	// app.post('/login', (req, res) => {
-	// 	dbo.collection('PersonalData').find({username: req.body.username}).toArray((err, results) => {
-	// 		if(err) throw err;
-	// 		res.send(results);
-	// 	})
-	// })
 
 	app.use(express.static(path.join(__dirname, '../../build')));
 
