@@ -9,6 +9,8 @@ app.use(express.json());
 
 db.connect().then(dbo => {
 
+	app.use(express.static(path.join(__dirname, '../../build')));
+
 	app.get('/', (req, res) => {
 		res.send('Hello welcome to the backend of this app');
 	});
@@ -36,9 +38,7 @@ db.connect().then(dbo => {
 
 	app.post('/formAction', (req, res) => {
 		dbo.collection('PersonalData').insertOne(req.body);
-	})
-
-	app.use(express.static(path.join(__dirname, '../../build')));
+	});
 
 	app.get('/', (req, res) => res.send('Hello backend welcome back sir!'));
 	app.listen(port, () => console.log(`Example ${port}`));
