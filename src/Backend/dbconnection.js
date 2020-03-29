@@ -2,8 +2,8 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 require('dotenv').config();
 
-const url = process.env.DB_URL_PRD;
-const dbName = 'Users';
+// const url = process.env.DB_URL_PRD;
+// const dbName = 'Users';
 
 const url = process.env.NODE_ENV === 'production' ? 
 	process.env.DB_URL_PRD : 
