@@ -9,7 +9,7 @@ const url = process.env.NODE_ENV === 'production' ?
 	process.env.DB_URL_PRD : 
 	process.env.DB_URL_DEV;
 const dbName = process.env.NODE_ENV === 'production' ?
-	'hheroku_tkxqqwvs' : 
+	'heroku_tkxqqwvs' : 
 	'kodflix';
 
 module.exports = { connect }; 
