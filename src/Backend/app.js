@@ -13,10 +13,17 @@ db.connect().then(dbo => {
 		res.send('Hello welcome to the backend of this app');
 	});
 
-	app.get('/rest/users', (req, res) => {
-		dbo.collection('PersonalData').find({}).toArray((err, results) => {
+	app.post('/login', (req, res) => {
+		dbo.collection('PersonalData').find({
+			username: req.body.username, 
+			password: req.body.password
+		}).toArray((err, results) => {
 			if(err) throw err;
-			res.send(results);
+			if(results < 1) {
+				res.send('Credentials do not exists');
+			} else {
+				res.send('Login Successful');
+			}
 		});
 	});
 
@@ -25,9 +32,12 @@ db.connect().then(dbo => {
 		dbo.collection('PersonalData').insertOne(req.body);
 	})
 
-	// app.post('rest/storeUser', (req, res) => {
-	// 	dbo.collection('PersonalData').insertOne(req.body);
-	// });
+	// app.post('/login', (req, res) => {
+	// 	dbo.collection('PersonalData').find({username: req.body.username}).toArray((err, results) => {
+	// 		if(err) throw err;
+	// 		res.send(results);
+	// 	})
+	// })
 
 	app.use(express.static(path.join(__dirname, '../../build')));
 
