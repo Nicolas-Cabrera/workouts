@@ -40,8 +40,6 @@ db.connect().then(dbo => {
 
 	app.use(express.static(path.join(__dirname, '../../build')));
 
-	app.listen(port, () => console.log(port));
-
 	app.get('*', function (req, res) {
 		res.sendFile(path.join(__dirname, '../../build', 'index.html'));
   	});
