@@ -19,7 +19,6 @@ function connect() {
 		MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
 			assert.equal(null, err);
 			console.log('Connected successfully');
-			console.log('process env is: ', process.env.NODE_ENV);
 			const dbo = client.db(dbName);
 			resolve(dbo);
 		})
