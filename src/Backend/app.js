@@ -46,4 +46,4 @@ db.connect().then(dbo => {
 		res.sendFile(path.join(__dirname, '../../build', 'index.html'));
   	});
 
-})
+});
