@@ -1,0 +1,29 @@
+.top {
+	height: 90vh;
+}
+
+.bottom-menu {
+
+}
+
+button {
+	padding: 20px 43px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	background-color: white;
+	border: none;
+}
+
+button:active {
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	float: left;
+}
+  

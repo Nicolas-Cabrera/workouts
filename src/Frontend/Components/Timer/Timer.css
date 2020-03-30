@@ -1,0 +1,25 @@
+.title {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	background-color: #2b324c;
+	color: white;
+	padding: 10px;
+}
+
+.main-timer {
+	margin: 15%;
+	display: flex;
+}
+
+.timer-clock {
+	padding: 50px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 50%;
+}
+
+.five-button {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin: 50px 5px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
