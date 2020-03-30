@@ -29,9 +29,13 @@ db.connect().then(dbo => {
 		}).toArray((err, results) => {
 			if(err) throw err;
 			if(results < 1) {
-				res.send('Credentials do not exists');
+				res.send({
+					"response": 'Credentials do not exist'
+				});
 			} else {
-				res.send('Login Successful');
+				res.send({
+					"response": 'Login Successful'
+				});
 			}
 		});
 	});
