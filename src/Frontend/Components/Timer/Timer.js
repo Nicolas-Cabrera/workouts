@@ -3,7 +3,7 @@ import './Timer.css';
 
 export default function Timer() {
 
-	const [ timer, setTimer ] = useState(2);
+	const [ timer, setTimer ] = useState(30);
 	const [ isActive, setIsActive ] = useState(false);
 
 	function timerSetter(e) {
@@ -40,6 +40,9 @@ export default function Timer() {
 		if(isActive) {
 			interval = setInterval(() => {
 				setTimer(timer => timer - 1);
+				if(timer < 2) {
+					starTimer();
+				}
 			}, 1000);
 		} else if(!isActive) {
 			clearInterval(interval);
