@@ -7,7 +7,6 @@ const port = process.env.PORT || 3001;
 //Authentication packages
 const session = require('express-session');
 const passport = require('passport');
-const Two_Hours = 1000 * 60 * 60 * 2;
 
 app.use(express.urlencoded());
 app.use(express.json());
@@ -33,27 +32,31 @@ db.connect().then(dbo => {
 			password: req.body.password
 		}).toArray((err, results) => {
 			if (err) throw err;
-			if (results < 1) {
-				return res.redirect('http://localhost:3000/signinfailed');
+			if(results < 1) {
+				res.send('asdsd');	
 			} else {
-				return res.redirect('http://localhost:3000/Main');
+				res.send('Hello');
 				const user_id = results[0]._id;
-				console.log(user_id);
+				req.session.userId = user_id;
+				console.log(req.session.userId);
 			}
+			// if (results < 1) {
+			// 	return res.redirect('http://localhost:3000/signinfailed');
+			// } else {
+			// 	//req.session.userId = results[0]._id;
+			// 	return res.redirect('http://localhost:3000/Main');
+			// 	//const user_id = results[0]._id;
+			// 	//console.log(user_id);
+			// }
 		});
 	});
 
 	app.use(session({
-		name: 'sid',
+		secret: 'keyboard cat',
 		resave: false,
 		saveUninitialized: false,
-		secret: 'ksajdvlafjov4iuovntp4utoi',
-		cookie: {
-			maxAge: Two_Hours,
-			sameSite: true,
-			secure: false,
-		}
-	})); 
+		//cookie: { secure: true }
+	}));
 
 	app.post('/formAction', (req, res) => {
 		dbo.collection('PersonalData').insertOne(req.body);	
