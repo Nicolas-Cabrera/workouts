@@ -12,6 +12,7 @@ export default function SignIn() {
 					<input name='username' type='text' placeholder='Username' required/>
 					<input name='password' type='password' placeholder='Password' required/>
 					<input type='submit' value='Login'></input>
+					<h3 className='wrong-login'>Credentials do not exist</h3>
 				</form>
 				<Link to='/Register' className='Link'>Sign Up</Link>
 			</div>
