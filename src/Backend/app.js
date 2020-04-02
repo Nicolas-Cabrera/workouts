@@ -16,7 +16,7 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 	cookie: {
-		maxAge:5000,
+		//maxAge:5000,
 		sameSite: true,
 	}
 }));
@@ -29,12 +29,12 @@ db.connect().then(dbo => {
 		res.send('Hello welcome to the backend of this app');
 	});
 
-	app.get('/users', (req, res) => {
-		dbo.collection('PersonalData').find({}).toArray((err, results) => {
-			if (err) throw err;
-			res.send(results);
-		})
-	});
+	// app.get('/users', (req, res) => {
+	// 	dbo.collection('PersonalData').find({}).toArray((err, results) => {
+	// 		if (err) throw err;
+	// 		res.send(results);
+	// 	})
+	// });
 
 	app.post('/login', (req, res, next) => {
 		dbo.collection('PersonalData').find({
@@ -58,9 +58,15 @@ db.connect().then(dbo => {
 		}	
 	});
 
-	app.get('/logout', (req, res) => {
-		//Logout
-	})
+	app.post('/logout', (req, res) => {
+		req.session.destroy(err => {
+			if(err) {
+				console.log('There was an error trying to logout');
+			} else {
+				return res.redirect('http://localhost:3000/');
+			}
+		});
+	});
 
 	app.get('/', (req, res) => res.send('Hello backend welcome back sir!'));
 	app.listen(port, () => console.log(`Example ${port}`));

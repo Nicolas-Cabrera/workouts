@@ -80,6 +80,9 @@ export default function Timer() {
 				<button className='num-buttons' value='150' onClick={(e) => timerSetter(e)}>150</button>
 				<button className='num-buttons' value='180' onClick={(e) => timerSetter(e)}>180</button>
 			</div>
+			<form method='POST' action='/logout'>
+				<input type='submit' value='Logout'></input>
+			</form>
 		</div>
 	);
 }
