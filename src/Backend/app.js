@@ -62,9 +62,9 @@ db.connect().then(dbo => {
 		req.session.destroy(err => {
 			if(err) {
 				console.log('There was an error trying to logout');
-			} else {
-				return res.redirect('http://localhost:3000/');
-			}
+			} 
+			res.clearCookie('Session-test');
+			return res.redirect('http://localhost:3000/');
 		});
 	});
 
