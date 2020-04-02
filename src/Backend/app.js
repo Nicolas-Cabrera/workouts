@@ -1,11 +1,12 @@
 const express = require('express');
 const db = require('./dbconnection');
 const app = express();
+const session = require('express-session');
 const path = require('path');
 const port = process.env.PORT || 3001;
 
 //Authentication packages
-const session = require('express-session');
+//const session = require('express-session');
 const passport = require('passport');
 
 app.use(express.urlencoded());
@@ -24,7 +25,7 @@ db.connect().then(dbo => {
 			if (err) throw err;
 			res.send(results);
 		})
-	})
+	});
 
 	app.post('/login', (req, res) => {
 		dbo.collection('PersonalData').find({
@@ -32,31 +33,16 @@ db.connect().then(dbo => {
 			password: req.body.password
 		}).toArray((err, results) => {
 			if (err) throw err;
-			if(results < 1) {
-				res.send('asdsd');	
+			if (results < 1) {
+				return res.redirect('http://localhost:3000/signinfailed');
 			} else {
-				res.send('Hello');
-				const user_id = results[0]._id;
-				req.session.userId = user_id;
-				console.log(req.session.userId);
+				//req.session.userId = results[0]._id;
+				return res.redirect('http://localhost:3000/Main');
+				//const user_id = results[0]._id;
+				//console.log(user_id);
 			}
-			// if (results < 1) {
-			// 	return res.redirect('http://localhost:3000/signinfailed');
-			// } else {
-			// 	//req.session.userId = results[0]._id;
-			// 	return res.redirect('http://localhost:3000/Main');
-			// 	//const user_id = results[0]._id;
-			// 	//console.log(user_id);
-			// }
 		});
 	});
-
-	app.use(session({
-		secret: 'keyboard cat',
-		resave: false,
-		saveUninitialized: false,
-		//cookie: { secure: true }
-	}));
 
 	app.post('/formAction', (req, res) => {
 		dbo.collection('PersonalData').insertOne(req.body);	
@@ -71,5 +57,11 @@ db.connect().then(dbo => {
 	app.get('*', function (req, res) {
 		res.sendFile(path.join(__dirname, '../../build', 'index.html'));
 	});
+
+	app.use(session({
+		secret: 'key-key',
+		resave: false,
+		saveUninitialized: false
+	}));
 
 });
