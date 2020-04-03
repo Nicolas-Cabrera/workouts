@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Register.css';
-import { Redirect } from 'react-router-dom';
 
 export default function Register() {
 

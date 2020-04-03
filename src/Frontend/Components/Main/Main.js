@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Main.css';
 import Profile from '../Profile/Profile';
 import Exercise from '../Exercise/Exercise';
+import Loader from '../Loading/Loading';
 import Timer from '../Timer/Timer';
 import weight from '../../img/weight.png'
 import timer from '../../img/timer.png';
@@ -22,18 +23,17 @@ export default function Main() {
 	function handleTabs(e) {
 		setTabs(e.target.value);
 	}
-
-	if(status === 'yes') {
+	if(!status) {
+		return <Loader />
+	} else if(status === 'yes') {
 		return (
 			<div>
 				<div className='top'>
-					{/* {
+					{
 						tabs === 'Exercise' ? <Exercise /> : 
 							tabs === 'Timer' ? <Timer /> :
 								<Profile />
-					} */}
-					<h2>The status is {status}</h2>
-					<Timer />
+					}
 				</div>
 				<div className='bottom-menu'>
 					<ul>
@@ -46,8 +46,8 @@ export default function Main() {
 					</ul>
 				</div>
 			</div>
-		)
-	}  else {
-		return <h2>nothing {status}</h2>
+		);
+	} else {
+		return <Redirect to='/' />
 	}
 }

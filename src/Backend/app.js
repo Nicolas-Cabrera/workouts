@@ -56,7 +56,11 @@ db.connect().then(dbo => {
 			res.send({
 				message: 'yes'
 			});
-		} 
+		}  else {
+			res.send({
+				message: 'no'
+			})
+		}
 	});
 
 	app.post('/logout', (req, res) => {

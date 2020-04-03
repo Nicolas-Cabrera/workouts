@@ -1,4 +1,4 @@
-import React, { useState, useInterval, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Timer.css';
 
 export default function Timer() {
@@ -36,7 +36,6 @@ export default function Timer() {
 
 	useEffect(() => {
 		let interval = null;
-		console.log(timer);
 		if(isActive) {
 			interval = setInterval(() => {
 				setTimer(timer => timer - 1);
@@ -80,9 +79,9 @@ export default function Timer() {
 				<button className='num-buttons' value='150' onClick={(e) => timerSetter(e)}>150</button>
 				<button className='num-buttons' value='180' onClick={(e) => timerSetter(e)}>180</button>
 			</div>
-			<form method='POST' action='/logout'>
+			{/* <form method='POST' action='/logout'>
 				<input type='submit' value='Logout'></input>
-			</form>
+			</form> */}
 		</div>
 	);
 }
