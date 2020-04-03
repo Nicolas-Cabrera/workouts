@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config();
+//require('dotenv').config();
 const db = require('./dbconnection');
 const app = express();
 const path = require('path');
@@ -8,9 +8,9 @@ const port = process.env.PORT || 3001;
 //Authentication packages
 const session = require('express-session');
 
-const url = process.env.NODE_ENV === 'production' ?
-	'localhost:3000' : 
-	'recordworkout.herokuapp.com';
+// const url = process.env.NODE_ENV === 'production' ?
+// 	'localhost:3000' : 
+// 	'recordworkout.herokuapp.com';
 
 app.use(express.urlencoded());
 app.use(express.json());
@@ -41,10 +41,10 @@ db.connect().then(dbo => {
 		}).toArray((err, results) => {
 			if (err) throw err;
 			if (results < 1) {
-				return res.redirect(`http://${url}/signinfailed`);
+				return res.redirect(`http://recordworkout.herokuapp.com/signinfailed`);
 			} else {
 				req.session.userId = results[0]._id;
-				return res.redirect(`http://${url}/Main`);
+				return res.redirect(`http://recordworkout.herokuapp.com/Main`);
 			}
 		});
 	});
@@ -52,7 +52,7 @@ db.connect().then(dbo => {
 	app.post('/formAction', (req, res) => {
 		dbo.collection('PersonalData').insertOne(req.body);	
 		if(req.body) {
-			return res.redirect(`http://${url}/`);
+			return res.redirect(`http://recordworkout.herokuapp.com/`);
 		}	
 	});
 
@@ -74,7 +74,7 @@ db.connect().then(dbo => {
 				console.log('There was an error trying to logout');
 			} 
 			res.clearCookie('Session-test');
-			return res.redirect(`http://${url}/`);
+			return res.redirect(`http://recordworkout.herokuapp.com/`);
 		});
 	});
 
