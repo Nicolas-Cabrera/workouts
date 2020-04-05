@@ -22,5 +22,5 @@ function connect() {
 			const dbo = client.db(dbName);
 			resolve(dbo);
 		})
-	})
+	});
 }
