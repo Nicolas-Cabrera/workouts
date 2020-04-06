@@ -49,14 +49,15 @@ db.connect().then(dbo => {
 		});
 	});
 
-	app.get('/current', (req, res) => {
-		//res.send(req.session.userId);
-		dbo.collection('PersonalData').find({
-			_id: "5e7cd4ec599a750c48d06c25"
-		}).toArray((err, results) => {
-			console.log(results);
-		})
-	});
+	// app.post('/current', (req, res) => {
+	// 	//res.send(req.session.userId);
+	// 	// dbo.collection('PersonalData').find({
+	// 	// 	_id: "5e7cd4ec599a750c48d06c25"
+	// 	// }).toArray((err, results) => {
+	// 	// 	console.log(results);
+	// 	// })
+	// 	res.send('Hello user: ')
+	// });
 
 	app.post('/formAction', (req, res) => {
 		dbo.collection('PersonalData').insertOne(req.body);	
