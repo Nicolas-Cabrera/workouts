@@ -8,3 +8,26 @@
 .user-icon {
 	margin: 40px 0 10px 0;
 }
+
+.personal-info {
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.logout {
+	width: 30%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 10px; 
+}
+
+.progress {
+	text-align: center;
+	font-size: 15px;
+	width: 90%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.progress-image {
+	padding: 0 10px
+}

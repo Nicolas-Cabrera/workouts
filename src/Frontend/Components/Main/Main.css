@@ -3,12 +3,8 @@
 	background-color: rgba(122, 122, 122, 0.2);
 }
 
-.bottom-menu {
-
-}
-
 button {
-	padding: 10px 43px;
+	padding: 12px 43px;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	background-color: white;
 	border: none;
