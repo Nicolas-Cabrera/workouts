@@ -1,6 +1,7 @@
 const express = require('express');
 //require('dotenv').config();
 const db = require('./dbconnection');
+var ObjectId = require('mongodb').ObjectID;
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
@@ -50,10 +51,15 @@ db.connect().then(dbo => {
 	});
 
 	app.get('/current', (req, res) => {
-		res.send(req.session.userId);
+		//res.send(req.session.userId);
+		//let userId = new ObjectId("5e7cd4ec599a750c48d06c25");
 		dbo.collection('PersonalData').find({
-			"_id": "5e7cd4ec599a750c48d06c25"
-		})
+			"_id": ObjectId(req.session.userId)
+		}).toArray((err, results) =>{
+			if(err) throw err;
+			res.send(results);
+			//console.log(results);
+		});
 	});
 
 	app.post('/formAction', (req, res) => {
