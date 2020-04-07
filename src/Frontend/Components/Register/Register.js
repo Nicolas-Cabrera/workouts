@@ -8,6 +8,7 @@ export default function Register() {
 			<div className='reg-form'>
 				<h1>Enter body measurements</h1>
 				<form  method='POST' action='/formAction'>
+					<input name='name' type='type' placeholder='Name' required /><br/>
 					<input name='username' type='text' placeholder='Username' required /><br/>
 					<input name='password' type='password' placeholder='Password' required /><br/>
 					<select name='gender' type='text'  >
