@@ -4,14 +4,14 @@ import usericon from '../../img/user.png';
 
 export default function Profile() {
 
-	const [ user, setUser ] = useState();
+	const [ user, setUser ] = useState({});
 
 	useEffect(() => {
 		fetch('/current')
 			.then(response => response.json())
 			.then(user => {
-				setUser(user)
-				console.log(user)
+				setUser(user[0])
+				console.log(user[0])
 			})
 	}, []);
 
@@ -21,8 +21,7 @@ export default function Profile() {
 				<h1>Profile</h1>
 			</div>
 			<img className='user-icon' src={usericon} alt='user' />
- 			<p>This is the profile tabs</p>
-
+				<p>Welcome {user.name}</p>
 			<form method='POST' action='/logout'>
 				<input type='submit' value='Logout'></input>
 			</form>
