@@ -5,7 +5,10 @@
 	padding: 10px;
 }
 
-.model {
-	padding: 30px 0px;
-	width: 50%;
+.exercise-tab {
+	background-image: url('../../img/model.png');
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: 50px;
 }
