@@ -1,5 +1,6 @@
 import React from 'react';
 import './Exercise.css';
+import model from '../../img/model.png';
 
 export default function Exercise() {
 	return (
@@ -7,7 +8,7 @@ export default function Exercise() {
 			<div className='title'>
 				<h1>Exercise</h1>
 			</div>
-			<p>This is the exercise tabs</p>
+			<img className='model' src={model} alt='model' />
 		</div>
 	);
 }
