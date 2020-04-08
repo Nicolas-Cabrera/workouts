@@ -5,8 +5,16 @@
 	padding: 10px;
 }
 
-.exercise-tab {
+.exercise-front {
 	background-image: url('../../img/model.png');
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: 50px;
+}
+
+.exercise-back {
+	background-image: url('../../img/modelback.PNG');
 	height: 100%;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -16,7 +24,7 @@
 .round {
 	position: absolute;
 	bottom: 100px;
-	right: 50px;
+	right: 10px;
 }
 
 .link {
@@ -57,7 +65,7 @@
 
 .cardio {
 	position: absolute;
-	right: 40px;
+	right: 35px;
 	top: 95px;
 }
 
@@ -83,4 +91,46 @@
 	position: absolute;
 	right: 40px;
 	top: 430px;
+}
+
+.traps {
+	position: absolute;
+	left: 5px;
+	top: 150px;
+}
+
+.triceps {
+	position: absolute;
+	left: 5px;
+	top: 205px;
+}
+
+.hamstrings {
+	position: absolute;
+	left: 5px;
+	top: 395px;
+}
+
+.calves {
+	position: absolute;
+	left: 5px;
+	top: 495px;
+}
+
+.lats {
+	position: absolute;
+	right: 40px;
+	top: 199px;
+}
+
+.lower {
+	position: absolute;
+	right: 5px;
+	top: 280px;
+}
+
+.glutes {
+	position: absolute;
+	right: 35px;
+	top: 332px;
 }

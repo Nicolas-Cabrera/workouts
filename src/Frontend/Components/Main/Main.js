@@ -63,12 +63,18 @@ export default function Main() {
 			</div>
 			<div className='bottom-menu'>
 				<ul>
-					<li><button onClick={(e) => handleTabs(e)} 
-						value='Exercise'><div><img src={weight} alt='weight'/></div>Exercise</button></li>
-					<li><button onClick={(e) => handleTabs(e)} 
-						value='Timer'><div><img src={timer} alt='timer'/></div>Timer</button></li>
-					<li><button onClick={(e) => handleTabs(e)} 
-						value='Profile'><div><img src={profile} alt='profile'/></div>Profile</button></li>
+					<li><button onClick={(e) => handleTabs(e)} value='Exercise'>
+							<div><img src={weight} alt='weight'/></div>Exercise
+						</button>
+					</li>
+					<li><button onClick={(e) => handleTabs(e)} value='Timer'>
+							<div><img src={timer} alt='timer'/></div>Timer
+						</button>
+					</li>
+					<li><button onClick={(e) => handleTabs(e)} value='Profile'>
+							<div><img src={profile} alt='profile'/></div>Profile
+						</button>
+					</li>
 				</ul>
 			</div>
 		</div>
