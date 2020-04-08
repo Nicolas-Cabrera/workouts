@@ -23,31 +23,55 @@ export default function Main() {
 	function handleTabs(e) {
 		setTabs(e.target.value);
 	}
-	if(!status) {
-		return <Loader />
-	} else if(status === 'yes') {
-		return (
-			<div>
-				<div className='top'>
-					{
-						tabs === 'Exercise' ? <Exercise /> : 
-							tabs === 'Timer' ? <Timer /> :
-								<Profile />
-					}
-				</div>
-				<div className='bottom-menu'>
-					<ul>
-						<li><button onClick={(e) => handleTabs(e)} 
-							value='Exercise'><div><img src={weight} alt='weight'/></div>Exercise</button></li>
-						<li><button onClick={(e) => handleTabs(e)} 
-							value='Timer'><div><img src={timer} alt='timer'/></div>Timer</button></li>
-						<li><button onClick={(e) => handleTabs(e)} 
-							value='Profile'><div><img src={profile} alt='profile'/></div>Profile</button></li>
-					</ul>
-				</div>
+	// if(!status) {
+	// 	return <Loader />
+	// } else if(status === 'yes') {
+	// 	return (
+	// 		<div>
+	// 			<div className='top'>
+	// 				{
+	// 					tabs === 'Exercise' ? <Exercise /> : 
+	// 						tabs === 'Timer' ? <Timer /> :
+	// 							<Profile />
+	// 				}
+	// 			</div>
+	// 			<div className='bottom-menu'>
+	// 				<ul>
+	// 					<li><button onClick={(e) => handleTabs(e)} 
+	// 						value='Exercise'><div><img src={weight} alt='weight'/></div>Exercise</button></li>
+	// 					<li><button onClick={(e) => handleTabs(e)} 
+	// 						value='Timer'><div><img src={timer} alt='timer'/></div>Timer</button></li>
+	// 					<li><button onClick={(e) => handleTabs(e)} 
+	// 						value='Profile'><div><img src={profile} alt='profile'/></div>Profile</button></li>
+	// 				</ul>
+	// 			</div>
+	// 		</div>
+	// 	);
+	// } else {
+	// 	return <Redirect to='/' />
+	// }
+
+	return (
+		<div>
+			<div className='top'>
+				{/* {
+					tabs === 'Exercise' ? <Exercise /> : 
+						tabs === 'Timer' ? <Timer /> :
+							<Profile />
+				} */}
+				<Exercise />
 			</div>
-		);
-	} else {
-		return <Redirect to='/' />
-	}
+			<div className='bottom-menu'>
+				<ul>
+					<li><button onClick={(e) => handleTabs(e)} 
+						value='Exercise'><div><img src={weight} alt='weight'/></div>Exercise</button></li>
+					<li><button onClick={(e) => handleTabs(e)} 
+						value='Timer'><div><img src={timer} alt='timer'/></div>Timer</button></li>
+					<li><button onClick={(e) => handleTabs(e)} 
+						value='Profile'><div><img src={profile} alt='profile'/></div>Profile</button></li>
+				</ul>
+			</div>
+		</div>
+	);
+
 }

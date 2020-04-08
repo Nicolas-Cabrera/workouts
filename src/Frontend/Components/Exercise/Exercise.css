@@ -12,3 +12,75 @@
 	background-repeat: no-repeat;
 	background-position-y: 50px;
 }
+
+.round {
+	position: absolute;
+	bottom: 100px;
+	right: 50px;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	background-color: transparent;
+}
+
+.shoulders {
+	position: absolute;
+	left: 3px;
+	top: 145px;
+}
+
+.chest {
+	position: absolute;
+	left: 3px;
+	top: 200px;
+}
+
+.forearms {
+	position: absolute;
+	left: 3px;
+	top: 250px;
+}
+
+.obliques {
+	position: absolute;
+	left: 3px;
+	top: 305px;
+}
+
+.quads {
+	position: absolute;
+	left: 3px;
+	top: 380px;
+}
+
+.cardio {
+	position: absolute;
+	right: 40px;
+	top: 95px;
+}
+
+.biceps {
+	position: absolute;
+	right: 40px;
+	top: 200px;
+}
+
+.abs {
+	position: absolute;
+	right: 40px;
+	top: 250px;
+}
+
+.abductors {
+	position: absolute;
+	right: 40px;
+	top: 380px;
+}
+
+.adductors {
+	position: absolute;
+	right: 40px;
+	top: 430px;
+}
