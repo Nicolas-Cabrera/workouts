@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import './Exercise.css';
+import { Link } from 'react-router-dom';
+import back from '../../img/back.png';
 
 export default function Workouts(props) {
 
-	const [ num, setNum ] = useState(props.location.state.num) 
+	const [num, setNum] = useState(props.location.state.num)
 
 	useEffect(() => {
-		fetch('/rest/workouts') 
+		fetch('/rest/workouts')
 			.then(response => response.json())
 			.then(res => console.log(res[num]))
 	}, []);
 
 	return (
 		<div>
-			<h2>{props.location.state.muscle}</h2>
-			<h2>{num}</h2>
+			<div className='title'>
+				<Link to='/Main' ><img className='back' src={back} alt='back' /></Link>
+				<h1>{props.location.state.muscle}</h1>
+			</div>
 		</div>
 	);
 }

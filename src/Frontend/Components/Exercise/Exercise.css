@@ -21,6 +21,12 @@
 	background-position-y: 50px;
 }
 
+.back {
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+
 .round {
 	position: absolute;
 	bottom: 100px;
