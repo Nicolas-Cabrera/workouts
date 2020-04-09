@@ -18,9 +18,9 @@ module.exports = function getWorkouts() {
 			]
 		},
 		{
-			"forearms": {
-
-			}
+			"forearms": [
+				
+			]
 		},
 		{
 			"obliques": {
