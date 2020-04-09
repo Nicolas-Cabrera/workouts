@@ -1,7 +1,7 @@
 module.exports = function getWorkouts() {
 	return [
 		{
-			"shoulders": [
+			"Shoulders": [
 				{ name: "Shoulder press", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 				{ name: "Shoulder press", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 				{ name: "Shoulder press", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
@@ -9,7 +9,7 @@ module.exports = function getWorkouts() {
 			]
 		},
 		{
-			"chest": [
+			"Chest": [
 				{ name: "Bench Press", instructions: 'asdadasd', repetition: "edfsdf"},
 				{ name: "Incline Bench Press", instructions: 'sadad', repetition: "fdfd"},
 				{ name: "Decline Bench Press", instructions: 'sadad', repetition: "fdfd"},
@@ -18,12 +18,12 @@ module.exports = function getWorkouts() {
 			]
 		},
 		{
-			"forearms": [
+			"Forearms": [
 				
 			]
 		},
 		{
-			"obliques": {
+			"Obliques": {
 
 			}
 		},
@@ -33,62 +33,62 @@ module.exports = function getWorkouts() {
 			}
 		},
 		{
-			"cardio": {
+			"Cardio": {
 
 			}
 		},
 		{
-			"biceps": {
+			"Biceps": {
 
 			}
 		},
 		{
-			"abs": {
+			"Abs": {
 
 			}
 		},
 		{
-			"abductors": {
+			"Abductors": {
 
 			}
 		},
 		{
-			"adductors": {
+			"Adductors": {
 
 			}
 		},
 		{
-			"traps": {
+			"Traps": {
 
 			}
 		}, 
 		{
-			"triceps": {
+			"Triceps": {
 
 			}
 		},
 		{
-			"hamstrings": {
+			"Hamstrings": {
 
 			}
 		},
 		{
-			"calves": {
+			"Calves": {
 
 			}
 		},
 		{
-			"lats": {
+			"Lats": {
 
 			}
 		},
 		{
-			"lowerback": {
+			"Lowerback": {
 
 			}
 		},
 		{
-			"glutes": {
+			"Glutes": {
 
 			}
 		}
