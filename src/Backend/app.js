@@ -5,6 +5,7 @@ var ObjectId = require('mongodb').ObjectID;
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
+const workouts = require('./getWorkouts');
 
 //Authentication packages
 const session = require('express-session');
@@ -26,6 +27,10 @@ app.use(session({
 		sameSite: true,
 	}
 }));
+
+app.get('/rest/workouts', (req, res) => {
+	res.send(workouts());
+})
 
 db.connect().then(dbo => {
 
