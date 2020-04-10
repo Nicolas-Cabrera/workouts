@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Exercise.css';
+import './Exercise.css';	
 import { Link } from 'react-router-dom';
 import back from '../../img/back.png';
 
@@ -18,6 +18,9 @@ export default function Workouts(props) {
 			<div className='title'>
 				<Link to='/Main' ><img className='back' src={back} alt='back' /></Link>
 				<h1>{props.location.state.muscle}</h1>
+			</div>
+			<div>
+				
 			</div>
 		</div>
 	);
