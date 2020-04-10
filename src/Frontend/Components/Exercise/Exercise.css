@@ -21,6 +21,19 @@
 	background-position-y: 50px;
 }
 
+.grid-item {
+	background-color: white;
+}
+
+.grid-workouts {
+	display: grid;
+	padding: 10px;
+	background-color: red;
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px;
+
+}
+
 .back {
 	position: absolute;
 	left: 10px;
