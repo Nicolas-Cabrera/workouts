@@ -26,10 +26,11 @@
 }
 
 .grid-workouts {
+	height: 100vh;
 	display: grid;
 	padding: 10px;
-	background-color: red;
-	grid-template-columns: auto auto;
+	background-color: rgba(122, 122, 122, 0.2);
+	grid-template-columns: 49% 49%;
 	grid-column-gap: 10px;
 
 }

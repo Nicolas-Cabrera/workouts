@@ -26,7 +26,7 @@ export default function Workouts(props) {
 			</div>
 			<div className='grid-workouts'>
 				{
-					workouts ? workouts.map((a) => <h2 className='grid-item'>{a.name}</h2>) : null
+					workouts ? workouts.map((a) => <h4 className='grid-item'>{a.name}</h4>) : null
 				}
 			</div>
 		</div>
