@@ -13,8 +13,8 @@ export default function Workouts(props) {
 		fetch('/rest/workouts')
 			.then(response => response.json())
 			.then(res => {
-				console.log(res[num]);
-				setWorkouts(res[num].Shoulders);
+				console.log(res[num][muscle]);
+				setWorkouts(res[num][muscle]);
 			})
 	}, []);
 
