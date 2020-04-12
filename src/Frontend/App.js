@@ -6,6 +6,7 @@ import SignInFailed from './Components/SignIn/SignInFailed';
 import Register from './Components/Register/Register';
 import Main from './Components/Main/Main';
 import Workouts from './Components/Exercise/Workouts';
+import Muscle from './Components/Exercise/Muscle';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
 					<Route exact path='/Register' component={Register} />
 					<Route exact path='/Main' component={Main} /> 
 					<Route exact path='/Workouts' component={Workouts} />
+					<Route exact path='/:muscle' component={Muscle} />
 				</div>
 			</Switch>
 		</Router>
