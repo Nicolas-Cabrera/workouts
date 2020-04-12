@@ -1,4 +1,5 @@
 import React from 'react';
+import './Workout.css';
 
 export default function Workout() {
 	return (

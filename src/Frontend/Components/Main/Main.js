@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css';
+import Workout from '../Workout/Workout';
 import Profile from '../Profile/Profile';
 import Exercise from '../Exercise/Exercise';
 import Loader from '../Loading/Loading';
 import Timer from '../Timer/Timer';
+import gym from '../../img/gym.png'
 import weight from '../../img/weight.png'
 import timer from '../../img/timer.png';
 import profile from '../../img/profile.png';
@@ -54,15 +56,20 @@ export default function Main() {
 	return (
 		<div>
 			<div className='top'>
-				{/* {
+				{
 					tabs === 'Exercise' ? <Exercise /> : 
 						tabs === 'Timer' ? <Timer /> :
-							<Profile />
-				} */}
-				<Exercise />
+							tabs === 'Workout' ? <Workout /> :
+								<Profile />
+				}
+				{/* <Exercise /> */}
 			</div>
 			<div className='bottom-menu'>
 				<ul>
+					<li><button onClick={(e) => handleTabs(e)} value='Workout'>
+							<div><img src={gym} alt='weight'/></div>Workout
+						</button>
+					</li>
 					<li><button onClick={(e) => handleTabs(e)} value='Exercise'>
 							<div><img src={weight} alt='weight'/></div>Exercise
 						</button>
