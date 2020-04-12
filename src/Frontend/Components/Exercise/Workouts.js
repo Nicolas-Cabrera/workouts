@@ -9,6 +9,9 @@ export default function Workouts(props) {
 	const [ muscle ] = useState(props.location.state.muscle)
 	const [ workouts, setWorkouts ] = useState();
 
+	//TO DO:
+	//When click on any muscle direct to the right muscle group page
+
 	useEffect(() => {
 		fetch('/rest/workouts')
 			.then(response => response.json())
