@@ -4,7 +4,9 @@ import './Workout.css';
 export default function Workout() {
 	return (
 		<div>
-			<h2>Hello from where you can record your Workout</h2>
+			<div className='title'>
+				<h1>Record Workout</h1>
+			</div>
 		</div>
 	);
 }
