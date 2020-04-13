@@ -51,7 +51,7 @@ export default function Exercise() {
 				<Link to={{ pathname: '/Workouts', state:{muscle: 'Calves',  num: 13 }}} className='link calves'>Calves</Link>
 				<Link to={{ pathname: '/Workouts', state:{muscle: 'Cardio',  num: 5 }}} className='link cardio'>Cardio</Link>
 				<Link to={{ pathname: '/Workouts', state:{muscle: 'Lats',  num: 14 }}} className='link lats'>Lats</Link>
-				<Link to={{ pathname: '/Workouts', state:{muscle: 'Lower Back',  num: 15 }}} className='link lower'>Lower Back</Link>
+				<Link to={{ pathname: '/Workouts', state:{muscle: 'Lowerback',  num: 15 }}} className='link lower'>Lower Back</Link>
 				<Link to={{ pathname: '/Workouts', state:{muscle: 'Glutes',  num: 16 }}} className='link glutes'>Glutes</Link>
 				<button onClick={() => swapImage()} className='round' >
 					<img src={round} alt='round' />

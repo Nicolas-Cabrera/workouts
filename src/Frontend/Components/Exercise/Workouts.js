@@ -17,6 +17,7 @@ export default function Workouts(props) {
 			.then(response => response.json())
 			.then(res => {
 				setWorkouts(res[num][muscle]);
+				console.log(res[num]);
 			})
 	}, []);
 

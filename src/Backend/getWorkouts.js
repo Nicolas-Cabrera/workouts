@@ -101,63 +101,61 @@ module.exports = function getWorkouts() {
 		},
 		{
 			"Traps": [
-				{ name: "Barbell Shrug", instructions: "", repetition: "" },
-				{ name: "Dumbbell Shrug", instructions: "", repetition: "" },
-				{ name: "Curl-Bar Shoulder Highpull", instructions: "", repetition: "" },
+				{ name: "Barbell Shrug", image: "barbellshrug", instructions: "", repetition: "" },
+				{ name: "Dumbbell Shrug", image: "dumbbellshrug", instructions: "", repetition: "" },
+				{ name: "Curl-Bar Shoulder Highpull", image: "highpull", instructions: "", repetition: "" },
 			]
 		}, 
 		{
 			"Triceps": [
-				{ name: "Cable Tricep Pushdown", instructions: "", repetition: "" },
-				{ name: "Skull Crashers", instructions: "", repetition: "" },
-				{ name: "Dumbbell Tricep Extensions", instructions: "", repetition: "" },
-				{ name: "Cable Triceps Extension", instructions: "", repetition: "" },
-				{ name: "Cable Tricep Kickback", instructions: "", repetition: "" },
-				{ name: "Close Grip Bench Press", instructions: "", repetition: "" },
-				{ name: "Dips", instructions: "", repetition: "" },
-				{ name: "Narrow Pushups", instructions: "", repetition: "" },
-				{ name: "Muscle Up", instructions: "", repetition: "" },
+				{ name: "Cable Tricep Pushdown", image: "triceppushdown", instructions: "", repetition: "" },
+				{ name: "Skull Crushers", image: "skullcrushers", instructions: "", repetition: "" },
+				{ name: "Dumbbell Tricep Extensions", image: "tricepextension", instructions: "", repetition: "" },
+				{ name: "Tricep Kickback", image: "tricepkickback", instructions: "", repetition: "" },
+				{ name: "Close Grip Bench Press", image: "closegripbenchpress", instructions: "", repetition: "" },
+				{ name: "Dips", image: "dips", instructions: "", repetition: "" },
+				{ name: "Narrow Pushups", image: "narrowpushups", instructions: "", repetition: "" },
+				{ name: "Muscle Up", image: "muscleups", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Hamstrings": [
-				{ name: "Hamstrings Machine", instructions: "", repetition: "" },
-				{ name: "Hamstrings Pullback Machine", instructions: "", repetition: "" },
-				{ name: "Deadlifts", instructions: "", repetition: "" },
-				{ name: "Squats", instructions: "", repetition: "" },
-				{ name: "Lunges", instructions: "", repetition: "" },
+				{ name: "Hamstrings Machine", image: "hamstring", instructions: "", repetition: "" },
+				{ name: "Hamstrings Pullback Machine", image: "hamstringspullback", instructions: "", repetition: "" },
+				{ name: "Deadlifts", image: "deadlifts", instructions: "", repetition: "" },
+				{ name: "Squats", image: "squat", instructions: "", repetition: "" },
+				{ name: "Lunges", image: "lunges", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Calves": [
-				{ name: "Calf Raise", instructions: "", repetition: "" },
-				{ name: "Calf Machine Press", instructions: "", repetition: "" },
-				{ name: "Running", instructions: "", repetition: "" },
-				{ name: "Bicycle", instructions: "", repetition: "" },
+				{ name: "Calf Raise", image: "calfraise", instructions: "", repetition: "" },
+				{ name: "Calf Machine Press", image: "calfmachine", instructions: "", repetition: "" },
+				{ name: "Running", image: "running", instructions: "", repetition: "" },
+				{ name: "Bicycle", image: "cycling", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Lats": [
-				{ name: "Pull Ups", instructions: "", repetition: "" },
-				{ name: "Cable Lat Pull Down", instructions: "", repetition: "" },
-				{ name: "Dumbbell Row", instructions: "", repetition: "" },
-				{ name: "Cable Lats Pull Down", instructions: "", repetition: "" },
-				{ name: "Muscle Ups", instructions: "", repetition: "" },
-				{ name: "Rollout on Knees", instructions: "", repetition: "" },
+				{ name: "Pull Ups", image: "pullups", instructions: "", repetition: "" },
+				{ name: "Cable Lat Pull Down", image: "cablelatpulldown", instructions: "", repetition: "" },
+				{ name: "Dumbbell Row", image: "dumbbellrow", instructions: "", repetition: "" },
+				{ name: "Muscle Ups", image: "muscleups", instructions: "", repetition: "" },
+				{ name: "Rollout on Knees", image: "rolloutknee", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Lowerback": [
-				{ name: "Deadlifts", instructions: "", repetition: "" },
-				{ name: "Weighted Hyperextension", instructions: "", repetition: "" },
+				{ name: "Deadlifts", image: "deadlifts", instructions: "", repetition: "" },
+				{ name: "Weighted Hyperextension", image: "hyperextension", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Glutes": [
-				{ name: "Squats", instructions: "", repetition: "" },
-				{ name: "Cable Kickback", instructions: "", repetition: "" },
-				{ name: "Deadlifts", instructions: "", repetition: "" },
-				{ name: "Lunges", instructions: "", repetition: "" },
+				{ name: "Squats", image: "squat", instructions: "", repetition: "" },
+				{ name: "Cable Kickback", image: "cablekickback", instructions: "", repetition: "" },
+				{ name: "Deadlifts", image: "deadlifts", instructions: "", repetition: "" },
+				{ name: "Lunges", image: "lunges", instructions: "", repetition: "" },
 			]
 		}
 
