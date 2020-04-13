@@ -56,13 +56,13 @@ export default function Main() {
 	return (
 		<div>
 			<div className='top'>
-				{
+				{/* {
 					tabs === 'Exercise' ? <Exercise /> : 
 						tabs === 'Timer' ? <Timer /> :
 							tabs === 'Workout' ? <Workout /> :
 								<Profile />
-				}
-				{/* <Exercise /> */}
+				} */}
+				<Exercise />
 			</div>
 			<div className='bottom-menu'>
 				<ul>

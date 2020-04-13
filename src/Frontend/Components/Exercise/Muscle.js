@@ -1,7 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useParams, useHistory, Link } from 'react-router-dom';
 
-export default function Muscle() {
+export default function Muscle(props) {
+
+	const { muscleId } = useParams();
+
+	console.log(muscleId);
 
 	//TODO:
 	//Send params from previous page to show the correct muscle and exercise selected
@@ -12,7 +16,7 @@ export default function Muscle() {
 			<div className='title'>
 				
 				{/* <Link to='/Workout' ><img className='back' src={back} alt='back' /></Link> */}
-				{/* <h1>{props.location.state.muscle}</h1> */}
+				{/* <h1>{muscle}</h1> */}
 			</div>
 		</div>
 	)
