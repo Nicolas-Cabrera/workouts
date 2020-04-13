@@ -12,91 +12,91 @@ module.exports = function getWorkouts() {
 		},
 		{
 			"Chest": [
-				{ name: "Bench Press", image:"benchpress", instructions: 'asdadasd', repetition: "edfsdf"},
-				{ name: "Incline Bench Press", image:"inclinepress", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Decline Bench Press", image:"declinepress", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Dips", image:"dips", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Dumbbell Fly", image:"dumbbellfly", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Cable Fly", image:"cablefly", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Push Ups", image:"pushups", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Bench Press", image: "benchpress", instructions: 'asdadasd', repetition: "edfsdf"},
+				{ name: "Incline Bench Press", image: "inclinepress", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Decline Bench Press", image: "declinepress", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Dips", image: "dips", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Dumbbell Fly", image: "dumbbellfly", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Cable Fly", image: "cablefly", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Push Ups", image: "pushups", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 			]
 		},
 		{
 			"Forearms": [
-				{ name: "Dumbbell Wrist Curl", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Cable Wrist Curl, Underhand Grid", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Cable Wrist Curl, Overhand Grid", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Dumbbell Wrist Curl", image: "wristcurl", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Cable Wrist Curl, Underhand Grid", image: "underwristcurl", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Cable Wrist Curl, Overhand Grid",  image: "overwristcurl",instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 			]
 		},
 		{
 			"Obliques": [
-				{ name: "Cross Body Crunch", instructions: "", repetition: "" },
-				{ name: "Hanging Leg Raise, Obliques", instructions: "", repetition: "" },
-				{ name: "Side plank", instructions: "", repetition: "" },
-				{ name: "Oblique Situps", instructions: "", repetition: "" },
-				{ name: "Russian Twist", instructions: "", repetition: "" },
-				{ name: "Weighted Side Bend", instructions: "", repetition: "" },
-				{ name: "Cable Torso Twist", instructions: "", repetition: "" },
-				{ name: "Lying Scissor Kicks", instructions: "", repetition: "" },
+				{ name: "Cross Body Crunch", image: "bodycrunch",  instructions: "", repetition: "" },
+				{ name: "Hanging Leg Raise, Obliques", image: "hanginglegraise",  instructions: "", repetition: "" },
+				{ name: "Side plank", image: "sideplank",  instructions: "", repetition: "" },
+				{ name: "Oblique Situps", image: "obliquesitup",  instructions: "", repetition: "" },
+				{ name: "Russian Twist", image: "russiantwist",  instructions: "", repetition: "" },
+				{ name: "Weighted Side Bend", image: "sidebend",  instructions: "", repetition: "" },
+				{ name: "Cable Torso Twist", image: "torsotwist",  instructions: "", repetition: "" },
+				{ name: "Lying Scissor Kicks", image: "scissorkicks", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Quads": [
-				{ name: "Leg Raise", instructions: "", repetition: "" },
-				{ name: "Leg Press", instructions: "", repetition: "" },
-				{ name: "Squats", instructions: "", repetition: "" },
-				{ name: "Lunges", instructions: "", repetition: "" },
-				{ name: "Running", instructions: "", repetition: "" },
-				{ name: "Cycling", instructions: "", repetition: "" },
-				{ name: "Elliptical", instructions: "", repetition: "" },
+				{ name: "Leg Raise", image: "legraise", instructions: "", repetition: "" },
+				{ name: "Leg Press", image: "legpress", instructions: "", repetition: "" },
+				{ name: "Squats", image: "squat", instructions: "", repetition: "" },
+				{ name: "Lunges", image: "lunges", instructions: "", repetition: "" },
+				{ name: "Running", image: "running", instructions: "", repetition: "" },
+				{ name: "Cycling", image: "cycling", instructions: "", repetition: "" },
+				{ name: "Elliptical", image: "elliptical", instructions: "", repetition: "" },
 
 			]
 		},
 		{
 			"Cardio": [
-				{ name: "Running", instructions: "", repetition: "" },
-				{ name: "Step Machine", instructions: "", repetition: "" },
-				{ name: "Bicycle", instructions: "", repetition: "" },
-				{ name: "Elliptical", instructions: "", repetition: "" },
+				{ name: "Running", image: "running", instructions: "", repetition: "" },
+				{ name: "Step Machine", image: "steps", instructions: "", repetition: "" },
+				{ name: "Bicycle", image: "cycling", instructions: "", repetition: "" },
+				{ name: "Elliptical", image: "elliptical", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Biceps": [
-				{ name: "Dumbbell Bicep Curls", instructions: "", repetition: "" },
-				{ name: "Curl-Bar Bicep Curls", instructions: "", repetition: "" },
-				{ name: "Preacher Curls", instructions: "", repetition: "" },
-				{ name: "Single Arms Preacher Curls", instructions: "", repetition: "" },
-				{ name: "Cable Biceps Concentration Curls", instructions: "", repetition: "" },
-				{ name: "Cable Biceps Curls with Rope", instructions: "", repetition: "" },
-				{ name: "21 Bicep Curls", instructions: "", repetition: "" },
-				{ name: "Chin-Ups", instructions: "", repetition: "" },
+				{ name: "Dumbbell Bicep Curls", image: "bicepcurls", instructions: "", repetition: "" },
+				{ name: "Curl-Bar Bicep Curls", image: "curlbarcurls", instructions: "", repetition: "" },
+				{ name: "Preacher Curls", image: "preachercurls", instructions: "", repetition: "" },
+				{ name: "Single Arms Preacher Curls", image: "singlearmpreacher", instructions: "", repetition: "" },
+				{ name: "Cable Biceps Concentration Curls", image: "concentrationcurls", instructions: "", repetition: "" },
+				{ name: "Cable Biceps Curls with Rope", image: "bicepropes", instructions: "", repetition: "" },
+				{ name: "21 Bicep Curls", image: "21biceps", instructions: "", repetition: "" },
+				{ name: "Chin-Ups", image: "chinups", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Abs": [
-				{ name: "Crunch", instructions: "", repetition: "" },
-				{ name: "Bicycle Crunch", instructions: "", repetition: "" },
-				{ name: "Situps", instructions: "", repetition: "" },
-				{ name: "Plank", instructions: "", repetition: "" },
-				{ name: "Lying Toe Touch", instructions: "", repetition: "" },
-				{ name: "Lying Scissor Kicks", instructions: "", repetition: "" },
-				{ name: "Lying Leg Raises", instructions: "", repetition: "" },
-				{ name: "Rollout on Knees", instructions: "", repetition: "" },
-				{ name: "Decline Situps", instructions: "", repetition: "" },
+				{ name: "Crunch", image: "crunch", instructions: "", repetition: "" },
+				{ name: "Bicycle Crunch", image: "bicyclecrunch", instructions: "", repetition: "" },
+				{ name: "Situps", image: "situps", instructions: "", repetition: "" },
+				{ name: "Plank", image: "plank", instructions: "", repetition: "" },
+				{ name: "Lying Toe Touch", image: "toetouch", instructions: "", repetition: "" },
+				{ name: "Lying Scissor Kicks", image: "scissorkicks", instructions: "", repetition: "" },
+				{ name: "Lying Leg Raises", image: "lyinglegraisers", instructions: "", repetition: "" },
+				{ name: "Rollout on Knees", image: "rolloutknee", instructions: "", repetition: "" },
+				{ name: "Decline Situps", image: "declinesitups", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Abductors": [
-				{ name: "Standing Abduction Machine", instructions: "", repetition: "" },
-				{ name: "Abduction Machine", instructions: "", repetition: "" },
-				{ name: "Cable Abduction", instructions: "", repetition: "" },
+				{ name: "Standing Abduction Machine", image: "standingabductionmachine", instructions: "", repetition: "" },
+				{ name: "Abduction Machine", image: "abductionmachine", instructions: "", repetition: "" },
+				{ name: "Cable Abduction", image: "cableabduction", instructions: "", repetition: "" },
 			]
 		},
 		{
 			"Adductors": [
-				{ name: "Standing Adduction Machine", instructions: "", repetition: "" },
-				{ name: "Adduction Machine", instructions: "", repetition: "" },
-				{ name: "Cable Adduction", instructions: "", repetition: "" },
+				{ name: "Standing Adduction Machine", image: "standingadductionmachine", instructions: "", repetition: "" },
+				{ name: "Adduction Machine", image: "adductionmachine", instructions: "", repetition: "" },
+				{ name: "Cable Adduction", image: "cableadduction", instructions: "", repetition: "" },
 			]
 		},
 		{
