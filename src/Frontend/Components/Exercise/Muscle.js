@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useHistory, Link } from 'react-router-dom';
 
-export default function Muscle(props) {
-
-	const { muscleId } = useParams();
-
-	console.log(muscleId);
-
-	//TODO:
-	//Send params from previous page to show the correct muscle and exercise selected
-	//Add back button to go back to corresponding page
+export default function Muscle() {
 
 	return (
 		<div>

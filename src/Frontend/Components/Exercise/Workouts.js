@@ -5,8 +5,8 @@ import back from '../../img/back.png';
 
 export default function Workouts(props) {
 
-	const [ num ] = useState(props.location.state.num)
-	const [ muscle ] = useState(props.location.state.muscle)
+	const [ num ] = useState(props.location.state.num);
+	const [ muscle ] = useState(props.location.state.muscle);
 	const [ workouts, setWorkouts ] = useState();
 
 	//TO DO:
@@ -16,7 +16,6 @@ export default function Workouts(props) {
 		fetch('/rest/workouts')
 			.then(response => response.json())
 			.then(res => {
-				console.log(res[num][muscle]);
 				setWorkouts(res[num][muscle]);
 			})
 	}, []);
@@ -29,9 +28,9 @@ export default function Workouts(props) {
 			</div>
 			<div className='grid-workouts'>
 				{
-					workouts ? workouts.map((a) => <h4 className='grid-item'>{a.name}</h4>) : null
+					workouts ? workouts.map((a, i) => <h4 key={i} className='grid-item'>{a.name}</h4>) : null
 				}
-			</div>
+			</div> 
 		</div>
 	);
 }

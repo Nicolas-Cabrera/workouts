@@ -47,7 +47,7 @@ module.exports = function getWorkouts() {
 				{ name: "Squats", instructions: "", repetition: "" },
 				{ name: "Lunges", instructions: "", repetition: "" },
 				{ name: "Running", instructions: "", repetition: "" },
-				{ name: "Clycling", instructions: "", repetition: "" },
+				{ name: "Cycling", instructions: "", repetition: "" },
 				{ name: "Elliptical", instructions: "", repetition: "" },
 
 			]
