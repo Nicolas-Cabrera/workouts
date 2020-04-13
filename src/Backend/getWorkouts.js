@@ -2,23 +2,23 @@ module.exports = function getWorkouts() {
 	return [
 		{
 			"Shoulders": [
-				{ name: "Shoulder press", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Arnold Shoulder press", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Dumbbell Lateral Raise", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Dumbbell Front Raise", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Dumbbell Reverse Fly", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Curl-bar Shoulder Highpull", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Shoulder press", image:"shoulderpress", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Arnold Shoulder press", image:"arnyshoulderpress", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Dumbbell Lateral Raise", image:"lateralraise", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Dumbbell Front Raise", image:"frontraise", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Dumbbell Reverse Fly", image:"reversefly", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Curl-bar Shoulder Highpull", image:"highpull", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 			]
 		},
 		{
 			"Chest": [
-				{ name: "Bench Press", instructions: 'asdadasd', repetition: "edfsdf"},
-				{ name: "Incline Bench Press", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Decline Bench Press", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Dips", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Dumbbell Fly", instructions: 'sadad', repetition: "fdfd"},
-				{ name: "Cable Fly", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
-				{ name: "Push Ups", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Bench Press", image:"benchpress", instructions: 'asdadasd', repetition: "edfsdf"},
+				{ name: "Incline Bench Press", image:"inclinepress", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Decline Bench Press", image:"declinepress", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Dips", image:"dips", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Dumbbell Fly", image:"dumbbellfly", instructions: 'sadad', repetition: "fdfd"},
+				{ name: "Cable Fly", image:"cablefly", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				{ name: "Push Ups", image:"pushups", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 			]
 		},
 		{

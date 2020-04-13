@@ -21,7 +21,17 @@
 	background-position-y: 50px;
 }
 
+.workout-image {
+	width: 100%;
+	height: 100%;
+}
+
+h5 {
+	margin: 10px;
+}
+
 .grid-item {
+	border: 1px solid black;
 	background-color: white;
 }
 
