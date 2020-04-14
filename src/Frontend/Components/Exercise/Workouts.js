@@ -31,7 +31,15 @@ export default function Workouts(props) {
 			</div>
 			<div className={gridClass}>
 				{
-					workouts ? workouts.map((a, i) => <div key={i} className='grid-item'><h5><img className='workout-image' src={require(`../../img/Workouts/${a.image}.png`)} alt='img' />{a.name}</h5></div>) : null
+					workouts ? workouts.map((a, i) => 
+						<div key={i} className='grid-item'>
+							<Link className='link' to='/Main'>								
+								<h5>
+									<img className='workout-image' src={require(`../../img/Workouts/${a.image}.png`)} alt='img' />
+									{a.name}
+								</h5>
+							</Link>
+						</div>) : null
 				}
 			</div> 
 		</div>
