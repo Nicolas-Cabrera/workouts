@@ -36,7 +36,7 @@ h5 {
 }
 
 .grid-workouts {
-	height: 100vh;
+	height: 100%;
 	display: grid;
 	padding: 10px;
 	background-color: rgba(122, 122, 122, 0.2);
