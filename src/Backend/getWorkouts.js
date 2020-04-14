@@ -26,6 +26,7 @@ module.exports = function getWorkouts() {
 				{ name: "Dumbbell Wrist Curl", image: "wristcurl", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 				{ name: "Cable Wrist Curl, Underhand Grid", image: "underwristcurl", instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
 				{ name: "Cable Wrist Curl, Overhand Grid",  image: "overwristcurl",instructions: "fdsfsfdfsf", repetition: "sdfsfds" },
+				
 			]
 		},
 		{

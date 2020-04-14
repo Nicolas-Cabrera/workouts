@@ -27,21 +27,31 @@
 }
 
 h5 {
-	margin: 10px;
+	margin: 5px;
 }
 
 .grid-item {
 	border: 1px solid black;
 	background-color: white;
+	height: 190px;
+}
+
+.less {
+	height: 100vh;
+}
+
+.more {
+	height: 100%;
 }
 
 .grid-workouts {
-	height: 100%;
 	display: grid;
 	padding: 10px;
 	background-color: rgba(122, 122, 122, 0.2);
 	grid-template-columns: 49% 49%;
+	grid-template-rows: 190px;
 	grid-column-gap: 10px;
+	grid-row-gap: 10px;
 
 }
 
