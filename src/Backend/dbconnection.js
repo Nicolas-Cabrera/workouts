@@ -16,7 +16,7 @@ module.exports = { connect };
 
 function connect() {
 	return new Promise((resolve, reject) => {
-		MongoClient.connect(url, { useNewUrlParser: true }, function(err, client) {
+		MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, client) {
 			assert.equal(null, err);
 			console.log('Connected successfully');
 			const dbo = client.db(dbName);
