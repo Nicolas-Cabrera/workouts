@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import back from '../../img/back.png';
 import './Muscle.css';
-import { useParams, useHistory } from 'react-router';
+import { useHistory } from 'react-router';
 
 export default function Muscle(props) {
 
-	const id = useParams();
-	// const  history = useHistory();
-	const [ prop, setProp ] = useState([]);
-	const [ data, setData ] = useState();
+	const  history = useHistory();
+	const [ arr, setArr ] = useState();
+	const [ exercise, setExercise ] = useState();
 
-	// function goBackHandler() {
-	// 	history.goBack();
-	// }
+	function goBackHandler() {
+		history.goBack();
+	}
 
 	useEffect(() => {
-		setProp(props.location.state);
-		console.log('array is: ', prop);
-		console.log('Id is: ', id);
-	}, [props, id]);
+		setArr(props.location.state.array);
+		setExercise(props.location.state.muscle);
+		if(arr) {
+			let exer = arr.map(a => a).find(a => a.url === exercise);
+			console.log('Exercise is: ', exer);
+		}
+	}, [arr, exercise]);
 
 	return (
 		<div>
 			<div className='top-bit'>
-				<h1>TEST</h1>
-				{/* <button className='back-history-button'><img src={back} alt='back' onClick={goBackHandler}/></button> */}
+				<button className='back-history-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
 			</div>
 		</div>
 	);

@@ -19,7 +19,7 @@ function App() {
 					<Route exact path='/Register' component={Register} />
 					<Route exact path='/Main' component={Main} /> 
 					<Route exact path='/Workouts' component={Workouts} />
-					<Route exact path='/:muscle' component={Muscle} />
+					<Route exact path='/Muscle' component={Muscle} />
 				</div>
 			</Switch>
 		</Router>
