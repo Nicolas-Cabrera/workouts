@@ -17,16 +17,27 @@ export default function Muscle(props) {
 		setArr(props.location.state.array);
 		setExercise(props.location.state.muscle);
 		if(arr) {
-			let exer = arr.map(a => a).find(a => a.url === exercise);
-			console.log('Exercise is: ', exer);
+			setExercise(arr.map(a => a).find(a => a.url === exercise));
 		}
-	}, [arr, exercise]);
+	}, [arr]);
 
-	return (
-		<div>
-			<div className='top-bit'>
-				<button className='back-history-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
+	if(exercise) {
+		console.log(exercise.image);
+	} 
+
+	if(exercise) {
+		return (
+			<div>
+				<div className='top-bit'>
+					<button className='back-history-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
+				</div>
+				<div>
+					<h2>{exercise.name}</h2>
+					{ exercise.image ? <img className='images-muscle-page' src={require(`../../img/Workouts/${exercise.image}.png`)} alt='images' /> : <h2></h2> }
+				</div>
 			</div>
-		</div>
-	);
+		);
+	} else {
+		return <h2></h2>
+	}
 }
