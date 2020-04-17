@@ -154,7 +154,7 @@ module.exports = function getWorkouts() {
 			"Glutes": [
 				{ url:"squat", name: "Squats", image: "squat", instructions: "", repetition: "" },
 				{ url:"cablekickback", name: "Cable Kickback", image: "cablekickback", instructions: "", repetition: "" },
-				{ url:"deadlifts", name: "Deadlifts", image: "", instructions: "", repetition: "" },
+				{ url:"deadlifts", name: "Deadlifts", image: "deadlifts", instructions: "", repetition: "" },
 				{ url:"lunges", name: "Lunges", image: "lunges", instructions: "", repetition: "" },
 			]
 		}
