@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import back from '../../img/back.png';
 import './Muscle.css';
+import Loading from '../Loading/Loading';
 import { useHistory } from 'react-router';
 
 export default function Muscle(props) {
 
-	const  history = useHistory();
+	const history = useHistory();
 	const [ arr, setArr ] = useState();
 	const [ exercise, setExercise ] = useState();
 
@@ -22,10 +23,6 @@ export default function Muscle(props) {
 	}, [arr]);
 
 	if(exercise) {
-		console.log(exercise.image);
-	} 
-
-	if(exercise) {
 		return (
 			<div>
 				<div className='top-bit'>
@@ -38,6 +35,6 @@ export default function Muscle(props) {
 			</div>
 		);
 	} else {
-		return <h2></h2>
+		return <Loading />
 	}
 }
