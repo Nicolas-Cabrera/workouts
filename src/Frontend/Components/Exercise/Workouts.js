@@ -26,7 +26,7 @@ export default function Workouts(props) {
 	return (
 		<div>
 			<div className='title'>
-				<Link to='/Main' ><img className='back' src={back} alt='back' /></Link>
+				<Link to={{ pathname: '/Main', state:{tab: 'Exercise' }}} ><img className='back' src={back} alt='back' /></Link>
 				<h1>{props.location.state.muscle}</h1>
 			</div>
 			<div className={gridClass}>
