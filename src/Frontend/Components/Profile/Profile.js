@@ -34,8 +34,8 @@ export default function Profile() {
 					</div>
 					<div>
 						<h4>{user.age}</h4>
-						<h4>{user.height}</h4>
-						<h4>{user.weight}</h4>
+						<h4>{user.height} cms</h4>
+						<h4>{user.weight} kg</h4>
 					</div>
 				</div>
 				<button className='progress'><img className='progress-image' src={progress} alt='progress' />Progress</button>

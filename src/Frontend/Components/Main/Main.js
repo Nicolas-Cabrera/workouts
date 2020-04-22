@@ -26,77 +26,77 @@ export default function Main() {
 		setTabs(e.target.value);
 	}
 
-	if (!status) {
-		return <Loader />
-	} else if (status === 'yes') {
-		return (
-			<div>
-				<div className='top'>
-					{
-					tabs === 'Exercise' ? <Exercise /> : 
-						tabs === 'Timer' ? <Timer /> :
-							tabs === 'Workout' ? <Workout /> :
-								<Profile />
-					}
-				</div>
-				<div className='bottom-menu'>
-					<ul>
-						<li><button onClick={(e) => handleTabs(e)} value='Workout'>
-							<div><img src={gym} alt='weight' /></div>Workout
-	 					</button>
-						</li>
-						<li><button onClick={(e) => handleTabs(e)} value='Exercise'>
-							<div><img src={weight} alt='weight' /></div>Exercise
-	 					</button>
-						</li>
-						<li><button onClick={(e) => handleTabs(e)} value='Timer'>
-							<div><img src={timer} alt='timer' /></div>Timer
-	 					</button>
-						</li>
-						<li><button onClick={(e) => handleTabs(e)} value='Profile'>
-							<div><img src={profile} alt='profile' /></div>Profile
-	 					</button>
-						</li>
-					</ul>
-				</div>
-			</div>
-		);
-	} else {
-		return <Redirect to='/' />
-	}
-
-	// return (
-	// 	<div>
-	// 		<div className='top'>
-	// 			{/* {
+	// if (!status) {
+	// 	return <Loader />
+	// } else if (status === 'yes') {
+	// 	return (
+	// 		<div>
+	// 			<div className='top'>
+	// 				{
 	// 				tabs === 'Exercise' ? <Exercise /> : 
 	// 					tabs === 'Timer' ? <Timer /> :
 	// 						tabs === 'Workout' ? <Workout /> :
 	// 							<Profile />
-	// 			} */}
-	// 			<Exercise />
+	// 				}
+	// 			</div>
+	// 			<div className='bottom-menu'>
+	// 				<ul>
+	// 					<li><button onClick={(e) => handleTabs(e)} value='Workout'>
+	// 						<div><img src={gym} alt='weight' /></div>Workout
+	//  					</button>
+	// 					</li>
+	// 					<li><button onClick={(e) => handleTabs(e)} value='Exercise'>
+	// 						<div><img src={weight} alt='weight' /></div>Exercise
+	//  					</button>
+	// 					</li>
+	// 					<li><button onClick={(e) => handleTabs(e)} value='Timer'>
+	// 						<div><img src={timer} alt='timer' /></div>Timer
+	//  					</button>
+	// 					</li>
+	// 					<li><button onClick={(e) => handleTabs(e)} value='Profile'>
+	// 						<div><img src={profile} alt='profile' /></div>Profile
+	//  					</button>
+	// 					</li>
+	// 				</ul>
+	// 			</div>
 	// 		</div>
-	// 		<div className='bottom-menu'>
-	// 			<ul>
-	// 				<li><button onClick={(e) => handleTabs(e)} value='Workout'>
-	// 						<div><img src={gym} alt='weight'/></div>Workout
-	// 					</button>
-	// 				</li>
-	// 				<li><button onClick={(e) => handleTabs(e)} value='Exercise'>
-	// 						<div><img src={weight} alt='weight'/></div>Exercise
-	// 					</button>
-	// 				</li>
-	// 				<li><button onClick={(e) => handleTabs(e)} value='Timer'>
-	// 						<div><img src={timer} alt='timer'/></div>Timer
-	// 					</button>
-	// 				</li>
-	// 				<li><button onClick={(e) => handleTabs(e)} value='Profile'>
-	// 						<div><img src={profile} alt='profile'/></div>Profile
-	// 					</button>
-	// 				</li>
-	// 			</ul>
-	// 		</div>
-	// 	</div>
-	// );
+	// 	);
+	// } else {
+	// 	return <Redirect to='/' />
+	// }
+
+	return (
+		<div>
+			<div className='top'>
+				{/* {
+					tabs === 'Exercise' ? <Exercise /> : 
+						tabs === 'Timer' ? <Timer /> :
+							tabs === 'Workout' ? <Workout /> :
+								<Profile />
+				} */}
+				<Workout />
+			</div>
+			<div className='bottom-menu'>
+				<ul>
+					<li><button onClick={(e) => handleTabs(e)} value='Workout'>
+							<div><img src={gym} alt='weight'/></div>Workout
+						</button>
+					</li>
+					<li><button onClick={(e) => handleTabs(e)} value='Exercise'>
+							<div><img src={weight} alt='weight'/></div>Exercise
+						</button>
+					</li>
+					<li><button onClick={(e) => handleTabs(e)} value='Timer'>
+							<div><img src={timer} alt='timer'/></div>Timer
+						</button>
+					</li>
+					<li><button onClick={(e) => handleTabs(e)} value='Profile'>
+							<div><img src={profile} alt='profile'/></div>Profile
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	);
 
 }
