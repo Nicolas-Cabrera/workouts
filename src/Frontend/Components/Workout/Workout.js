@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Loading from '../Loading/Loading';
 import './Workout.css';
 
 export default function Workout() {
 
 	const [ show, setShow ] = useState(true);
+	const [ workouts, setWorkouts ] = useState();
+	const [ muscle, setMuscle ] = useState();
+
+	useEffect(() => {
+		fetch('/rest/workouts')
+			.then(res => res.json())
+			.then(response => {
+				setWorkouts(response.map((a) => Object.keys(a)))
+			});
+	}, []);
 
 	function showHide() {
 		setShow(!show);
@@ -15,17 +26,29 @@ export default function Workout() {
 		let day = date.getDate();
 		let month = date.getMonth();
 		let year = date.getFullYear();
-		return `${day} ${months[month]} ${year}` ;
+		return `${day} ${months[month]} ${year}`;
+	}
+
+	function setMuscleGroup(e) {
+		setMuscle(e.target.value);
 	}
 
 
-	if(show) {
+	if (show && workouts) {
 		return (
 			<div>
 				<div className='title'>
 					<h1>Record Workout</h1>
 				</div>
 				<div className='workout-section'>
+					<form className='select-muscle'>
+						<label>Select Muscle Group</label>
+						<select onChange={(e) => setMuscleGroup(e)}>
+							{
+								workouts.map((a) => <option key={a}>{a[0]}</option>)
+							}
+						</select>
+					</form>
 					<div>
 						<h2 className='intro'>Stretch and warm up before starting, remember you can't train if you are injured...</h2>
 						<button className='start-button' onClick={() => showHide()}>START</button>
@@ -33,7 +56,7 @@ export default function Workout() {
 				</div>
 			</div>
 		);
-	} else {
+	} else if(!show) {
 		return (
 			<div>
 				<div className='title'>
@@ -42,15 +65,14 @@ export default function Workout() {
 				<div className='workout-section'>
 					<div className='workout-block'>
 						<div className='workouts-top'>
-							<form className='select-muscle'>
-								<select>
-									<option>Bench Press</option>
-									<option>Cable Fly</option>
-									<option>Dips</option>
-								</select>
-							</form>
+							<h2 className='selected-muscle'>{muscle}</h2>
 							<h6 className='date'>{getDate()}</h6>
 						</div>
+						<form className='select-exercise'>
+							<select>
+								<option>test</option>
+							</select>
+						</form>
 						<div className='headers'>
 							<h4 className='header-item'>SET</h4>
 							<h4 className='header-item'>WEIGHT(kg)</h4>
@@ -70,5 +92,7 @@ export default function Workout() {
 				</div>
 			</div>
 		);
+	} else {
+		return <Loading />
 	}
 }
