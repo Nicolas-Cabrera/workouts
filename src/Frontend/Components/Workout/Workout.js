@@ -9,6 +9,16 @@ export default function Workout() {
 		setShow(!show);
 	}
 
+	function getDate() {
+		let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Sept', 'Oct', 'Nov', 'Dec'];
+		let date = new Date();
+		let day = date.getDate();
+		let month = date.getMonth();
+		let year = date.getFullYear();
+		return `${day} ${months[month]} ${year}` ;
+	}
+
+
 	if(show) {
 		return (
 			<div>
@@ -39,17 +49,19 @@ export default function Workout() {
 									<option>Dips</option>
 								</select>
 							</form>
-							<h6 className='date'>22nd April 2020</h6>
+							<h6 className='date'>{getDate()}</h6>
 						</div>
 						<div className='headers'>
 							<h4 className='header-item'>SET</h4>
 							<h4 className='header-item'>WEIGHT(kg)</h4>
 							<h4 className='header-item'>REPS</h4>
 						</div>
-						<div className='sets'>
-							<h4 className='sets-item'>1</h4>
-							<h4 className='sets-item'>55</h4>
-							<h4 className='sets-item'>10</h4>
+						<div>
+							<form className='sets'>
+								<input type='number' className='sets-item'></input>
+								<input type='number' className='sets-item'></input>
+								<input type='number' className='sets-item'></input>
+							</form>
 						</div>
 						<button>Add new set</button>
 					</div>

@@ -42,10 +42,12 @@ h2 {
 }
 
 .sets {
+	padding: 5px;
 	display: flex;
 	border-bottom: 1px solid black;	
 }
 
 .sets-item {
-	margin: 0 15%;
+	padding: 5px 10px;
+	margin: 0 2%;
 }
