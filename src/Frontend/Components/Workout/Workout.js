@@ -42,6 +42,8 @@ export default function Workout() {
 	}
 
 	function addRep() {
+		//testing
+		console.log('Testing');
 		//console.log(reps);
 	}
 
