@@ -7,6 +7,8 @@ export default function Workout() {
 	const [ show, setShow ] = useState(true);
 	const [ workouts, setWorkouts ] = useState();
 	const [ muscle, setMuscle ] = useState();
+	const [ fullWorkout, setFullWorkout ] = useState([]);
+	const [ reps, setReps ] = useState({weight: '', reps: ''});
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -31,6 +33,16 @@ export default function Workout() {
 
 	function setMuscleGroup(e) {
 		setMuscle(e.target.value);
+	}
+
+	function handleInput(weight, rep) {
+		//setReps({weight: '56', reps: '45'});
+		console.log('weight is: ', weight.target.value);
+		console.log('Reps is: ', rep.target.value);
+	}
+
+	function addRep() {
+		//console.log(reps);
 	}
 
 
@@ -76,16 +88,16 @@ export default function Workout() {
 						<div className='headers'>
 							<h4 className='header-item'>SET</h4>
 							<h4 className='header-item'>WEIGHT(kg)</h4>
-							<h4 className='header-item'>REPS</h4>
+							<h4 className='header-item-reps'>REPS</h4>
 						</div>
 						<div>
 							<form className='sets'>
-								<input type='number' className='sets-item'></input>
-								<input type='number' className='sets-item'></input>
-								<input type='number' className='sets-item'></input>
+								<label className='sets-item'>1</label>
+								<input type='number' className='sets-item' onChange={(weight) => handleInput(weight)}></input>
+								<input type='number' className='sets-item' onChange={(rep) => handleInput(rep)}></input>
 							</form>
 						</div>
-						<button>Add new set</button>
+						<button onClick={() => addRep()}>Add new set</button>
 					</div>
 					<button>Add New Exercise</button>
 					<button>Finish Workout</button>
