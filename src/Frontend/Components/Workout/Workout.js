@@ -35,15 +35,13 @@ export default function Workout() {
 		setMuscle(e.target.value);
 	}
 
-	function handleInput(weight, rep) {
+	function handleInput(e) {
 		//setReps({weight: '56', reps: '45'});
-		console.log('weight is: ', weight.target.value);
-		console.log('Reps is: ', rep.target.value);
+		console.log('weight is: ', e.target.value);
+		console.log('Reps is: ', e.target.value);
 	}
 
 	function addRep() {
-		//testing
-		console.log('Testing');
 		//console.log(reps);
 	}
 
@@ -95,8 +93,8 @@ export default function Workout() {
 						<div>
 							<form className='sets'>
 								<label className='sets-item'>1</label>
-								<input type='number' className='sets-item' onChange={(weight) => handleInput(weight)}></input>
-								<input type='number' className='sets-item' onChange={(rep) => handleInput(rep)}></input>
+								<input type='number' className='sets-item' onChange={(e) => handleInput(e)}></input>
+								<input type='number' className='sets-item' onChange={(e) => handleInput(e)}></input>
 							</form>
 						</div>
 						<button onClick={() => addRep()}>Add new set</button>
