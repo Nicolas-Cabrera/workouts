@@ -8,7 +8,8 @@ export default function Workout() {
 	const [ workouts, setWorkouts ] = useState();
 	const [ muscle, setMuscle ] = useState();
 	const [ fullWorkout, setFullWorkout ] = useState([]);
-	const [ reps, setReps ] = useState({weight: '', reps: ''});
+	const [ rep, setRep ] = useState();
+	const [ weight,setWeight ] = useState();
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -35,17 +36,17 @@ export default function Workout() {
 		setMuscle(e.target.value);
 	}
 
-	function handleInput(e, second) {
-		if(e && second === 1) {
-			console.log('weight is: ', e.target.value);
+	function handleInput(e, index) {
+		if(e && index === 1) {
+			setWeight(`Weight: ${e.target.value}`);
 		} else {
-			console.log('Reps is: ', e.target.value);
+			setRep(`Rep: ${e.target.value}`);
 		}
-		//setReps({weight: '56', reps: '45'});
 	}
 
 	function addRep() {
-		//console.log(reps);
+		console.log(weight);
+		console.log(rep);
 	}
 
 
