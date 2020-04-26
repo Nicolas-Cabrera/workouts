@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../Loading/Loading';
+import ListSets from './ListSets';
 import './Workout.css';
 
 export default function Workout() {
@@ -7,9 +8,11 @@ export default function Workout() {
 	const [ show, setShow ] = useState(true);
 	const [ workouts, setWorkouts ] = useState();
 	const [ muscle, setMuscle ] = useState();
+	const [ history, setHistory ]  = useState([]);
 	const [ fullWorkout, setFullWorkout ] = useState([]);
 	const [ rep, setRep ] = useState();
 	const [ weight,setWeight ] = useState();
+	const [ input, setInput ] = useState();
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -38,15 +41,23 @@ export default function Workout() {
 
 	function handleInput(e, index) {
 		if(e && index === 1) {
-			setWeight(`Weight: ${e.target.value}`);
-		} else {
-			setRep(`Rep: ${e.target.value}`);
+			setWeight(e.target.value);
+		} else if(e && index === 2) {
+			setRep(e.target.value);
 		}
 	}
 
 	function addRep() {
-		console.log(weight);
-		console.log(rep);
+		if(weight && rep) {
+			const newItem = `${weight} x ${rep}`;
+			if(newItem !== '') {
+				const newItems = [...history, newItem];
+				setHistory(newItems);
+				setInput('');
+				setWeight('');
+				setRep('');
+			}
+		}
 	}
 
 
@@ -94,11 +105,12 @@ export default function Workout() {
 							<h4 className='header-item'>WEIGHT(kg)</h4>
 							<h4 className='header-item-reps'>REPS</h4>
 						</div>
+						<ListSets sets={history}/>
 						<div>
 							<form className='sets'>
 								<label className='sets-item'>1</label>
-								<input type='number' className='sets-item' onChange={(e) => handleInput(e, 1)}></input>
-								<input type='number' className='sets-item' onChange={(e) => handleInput(e, 2)}></input>
+								<input type='number' className='sets-item' value={weight} onChange={(e) => handleInput(e, 1)} ></input>
+								<input type='number' className='sets-item' value={rep} onChange={(e) => handleInput(e, 2)} ></input>
 							</form>
 						</div>
 						<button onClick={() => addRep()}>Add new set</button>
