@@ -8,11 +8,11 @@ export default function Workout() {
 	const [ show, setShow ] = useState(true);
 	const [ workouts, setWorkouts ] = useState();
 	const [ muscle, setMuscle ] = useState();
-	const [ history, setHistory ]  = useState([]);
+	const [ weighthistory, setWeightHistory ]  = useState([]);
+	const [ rephistory, setRepHistory ]  = useState([]);
 	const [ fullWorkout, setFullWorkout ] = useState([]);
 	const [ rep, setRep ] = useState();
 	const [ weight,setWeight ] = useState();
-	const [ input, setInput ] = useState();
 	const [ num, setNum ] = useState(1);
 
 	useEffect(() => {
@@ -50,11 +50,14 @@ export default function Workout() {
 
 	function addRep() {
 		if(weight && rep) {
-			const newItem = `${weight} x ${rep}`;
-			if(newItem !== '') {
-				const newItems = [...history, newItem];
-				setHistory(newItems);
-				setInput('');
+			//const newItem = `${weight} x ${rep}`;
+			const newWeight = weight;
+			const newRep = rep;
+			if(newWeight !== '' && newRep !== '') {
+				const newWeights = [...weighthistory, newWeight];
+				const newReps = [...rephistory, newRep];
+				setWeightHistory(newWeights);
+				setRepHistory(newReps);
 				setWeight('');
 				setRep('');
 				setNum(num + 1);
@@ -107,7 +110,7 @@ export default function Workout() {
 							<h4 className='header-item'>WEIGHT(kg)</h4>
 							<h4 className='header-item-reps'>REPS</h4>
 						</div>
-						<ListSets sets={history} />
+						<ListSets weight={weighthistory} rep={rephistory} />
 						<div>
 							<form className='sets'>
 								<label className='sets-item'>{num}</label>

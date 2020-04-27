@@ -2,13 +2,22 @@ import React from 'react';
 import './Workout.css';
 
 export default function ListSets(props) {
-	const sets = props.sets;
-	console.log(sets);
-	const listSets = sets.map((item, index) => {
+	const weight = props.weight;
+	const rep = props.rep;
+	const listWeight = weight.map((item, index) => {
 		return <div className='list' key={index}>
-			<span className='header-item'>{index + 1}</span> <span>{item}</span>
+			<span className='set'>{index + 1}</span> <span className='weight'>{item}</span>
 		</div>
 	})
 
-	return <div>{listSets}</div>
+	const listRep = rep.map((item, index) => {
+		return <div className='list' key={index}>
+			<span>{item}</span>
+		</div>
+	})
+
+	return <div className='history'>
+		<div>{listWeight}</div>
+		<div>{listRep}</div>
+	</div>
 }
