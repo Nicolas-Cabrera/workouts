@@ -13,6 +13,7 @@ export default function Workout() {
 	const [ rep, setRep ] = useState();
 	const [ weight,setWeight ] = useState();
 	const [ input, setInput ] = useState();
+	const [ num, setNum ] = useState(1);
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -56,6 +57,7 @@ export default function Workout() {
 				setInput('');
 				setWeight('');
 				setRep('');
+				setNum(num + 1);
 			}
 		}
 	}
@@ -105,10 +107,10 @@ export default function Workout() {
 							<h4 className='header-item'>WEIGHT(kg)</h4>
 							<h4 className='header-item-reps'>REPS</h4>
 						</div>
-						<ListSets sets={history}/>
+						<ListSets sets={history} />
 						<div>
 							<form className='sets'>
-								<label className='sets-item'>1</label>
+								<label className='sets-item'>{num}</label>
 								<input type='number' className='sets-item' value={weight} onChange={(e) => handleInput(e, 1)} ></input>
 								<input type='number' className='sets-item' value={rep} onChange={(e) => handleInput(e, 2)} ></input>
 							</form>
