@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../Loading/Loading';
-import ListSets from './ListSets';
+import ListWorkouts from './ListWorkouts';
 import './Workout.css';
 
 export default function Workout() {
@@ -8,12 +8,6 @@ export default function Workout() {
 	const [ show, setShow ] = useState(true);
 	const [ workouts, setWorkouts ] = useState();
 	const [ muscle, setMuscle ] = useState();
-	const [ weighthistory, setWeightHistory ]  = useState([]);
-	const [ rephistory, setRepHistory ]  = useState([]);
-	const [ fullWorkout, setFullWorkout ] = useState([]);
-	const [ rep, setRep ] = useState();
-	const [ weight,setWeight ] = useState();
-	const [ num, setNum ] = useState(1);
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -39,32 +33,6 @@ export default function Workout() {
 	function setMuscleGroup(e) {
 		setMuscle(e.target.value);
 	}
-
-	function handleInput(e, index) {
-		if(e && index === 1) {
-			setWeight(e.target.value);
-		} else if(e && index === 2) {
-			setRep(e.target.value);
-		}
-	}
-
-	function addRep() {
-		if(weight && rep) {
-			//const newItem = `${weight} x ${rep}`;
-			const newWeight = weight;
-			const newRep = rep;
-			if(newWeight !== '' && newRep !== '') {
-				const newWeights = [...weighthistory, newWeight];
-				const newReps = [...rephistory, newRep];
-				setWeightHistory(newWeights);
-				setRepHistory(newReps);
-				setWeight('');
-				setRep('');
-				setNum(num + 1);
-			}
-		}
-	}
-
 
 	if (show && workouts) {
 		return (
@@ -100,25 +68,7 @@ export default function Workout() {
 							<h2 className='selected-muscle'>{muscle}</h2>
 							<h6 className='date'>{getDate()}</h6>
 						</div>
-						<form className='select-exercise'>
-							<select>
-								<option>test</option>
-							</select>
-						</form>
-						<div className='headers'>
-							<h4 className='header-item'>SET</h4>
-							<h4 className='header-item'>WEIGHT(kg)</h4>
-							<h4 className='header-item-reps'>REPS</h4>
-						</div>
-						<ListSets weight={weighthistory} rep={rephistory} />
-						<div>
-							<form className='sets'>
-								<label className='sets-item'>{num}</label>
-								<input type='number' className='sets-item' value={weight} onChange={(e) => handleInput(e, 1)} ></input>
-								<input type='number' className='sets-item' value={rep} onChange={(e) => handleInput(e, 2)} ></input>
-							</form>
-						</div>
-						<button onClick={() => addRep()}>Add new set</button>
+						<ListWorkouts />
 					</div>
 					<button>Add New Exercise</button>
 					<button>Finish Workout</button>
