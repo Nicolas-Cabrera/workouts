@@ -5,10 +5,10 @@ import './Workout.css';
 
 export default function Workout() {
 
-	const [ show, setShow ] = useState(true);
-	const [ workouts, setWorkouts ] = useState();
-	const [ muscle, setMuscle ] = useState();
-	const [ listWorkout, setListWorkout ] = useState([<ListWorkouts />]);
+	const [show, setShow] = useState(true);
+	const [workouts, setWorkouts] = useState();
+	const [muscle, setMuscle] = useState();
+	const [listWorkout, setListWorkout] = useState([<ListWorkouts />]);
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -23,7 +23,9 @@ export default function Workout() {
 	}
 
 	function AddNewExercise() {
-		console.log('Exercise Added');
+		let item = <ListWorkouts />;
+		listWorkout.push(item);
+		console(listWorkout);
 	}
 
 	function getDate() {
@@ -38,9 +40,6 @@ export default function Workout() {
 	function setMuscleGroup(e) {
 		setMuscle(e.target.value);
 	}
-
-	console.log(listWorkout.map((a) => a));
-
 
 	if (show && workouts) {
 		return (
@@ -64,7 +63,7 @@ export default function Workout() {
 				</div>
 			</div>
 		);
-	} else if(!show) {
+	} else if (!show) {
 		return (
 			<div>
 				<div className='title'>
@@ -78,7 +77,11 @@ export default function Workout() {
 						</div>
 						{/* <ListWorkouts /> */}
 						{
-							listWorkout.map((a) => a)
+							listWorkout.map((a, index) => (
+								<React.Fragment key={index}>
+									{a}
+								</React.Fragment>
+							))
 						}
 					</div>
 					<button onClick={() => AddNewExercise()}>Add New Exercise</button>
