@@ -21,6 +21,10 @@ export default function Workout() {
 		setShow(!show);
 	}
 
+	function AddNewExercise() {
+		console.log('Exercise Added');
+	}
+
 	function getDate() {
 		let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Sept', 'Oct', 'Nov', 'Dec'];
 		let date = new Date();
@@ -70,7 +74,7 @@ export default function Workout() {
 						</div>
 						<ListWorkouts />
 					</div>
-					<button>Add New Exercise</button>
+					<button onClick={AddNewExercise()}>Add New Exercise</button>
 					<button>Finish Workout</button>
 				</div>
 			</div>
