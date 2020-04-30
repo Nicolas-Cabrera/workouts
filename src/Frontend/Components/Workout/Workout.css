@@ -18,6 +18,7 @@ h2 {
 }
 
 .workout-section {
+	overflow: scroll;
 	background-color: white;
 	height: 78.5vh; 
 	margin: 10px 10px;

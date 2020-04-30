@@ -8,7 +8,7 @@ export default function Workout() {
 	const [show, setShow] = useState(true);
 	const [workouts, setWorkouts] = useState();
 	const [muscle, setMuscle] = useState();
-	const [listWorkout, setListWorkout] = useState([<ListWorkouts />]);
+	const [listWorkout, setListWorkout] = useState([<ListWorkouts />, <ListWorkouts />, <ListWorkouts />]);
 
 	useEffect(() => {
 		fetch('/rest/workouts')
