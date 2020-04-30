@@ -8,6 +8,7 @@ export default function Workout() {
 	const [ show, setShow ] = useState(true);
 	const [ workouts, setWorkouts ] = useState();
 	const [ muscle, setMuscle ] = useState();
+	const [ listWorkout, setListWorkout ] = useState([<ListWorkouts />]);
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -37,6 +38,9 @@ export default function Workout() {
 	function setMuscleGroup(e) {
 		setMuscle(e.target.value);
 	}
+
+	console.log(listWorkout.map((a) => a));
+
 
 	if (show && workouts) {
 		return (
@@ -72,9 +76,12 @@ export default function Workout() {
 							<h2 className='selected-muscle'>{muscle}</h2>
 							<h6 className='date'>{getDate()}</h6>
 						</div>
-						<ListWorkouts />
+						{/* <ListWorkouts /> */}
+						{
+							listWorkout.map((a) => a)
+						}
 					</div>
-					<button onClick={AddNewExercise()}>Add New Exercise</button>
+					<button onClick={() => AddNewExercise()}>Add New Exercise</button>
 					<button>Finish Workout</button>
 				</div>
 			</div>
