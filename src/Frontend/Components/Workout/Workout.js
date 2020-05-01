@@ -8,7 +8,7 @@ export default function Workout() {
 	const [show, setShow] = useState(true);
 	const [workouts, setWorkouts] = useState();
 	const [muscle, setMuscle] = useState();
-	const [listWorkout, setListWorkout] = useState([<ListWorkouts />, <ListWorkouts />, <ListWorkouts />]);
+	const [listWorkout, setListWorkout] = useState([<ListWorkouts />]);
 
 	useEffect(() => {
 		fetch('/rest/workouts')
@@ -24,8 +24,8 @@ export default function Workout() {
 
 	function AddNewExercise() {
 		let item = <ListWorkouts />;
-		listWorkout.push(item);
-		console(listWorkout);
+		setListWorkout([...listWorkout, item]);
+		console.log(listWorkout);
 	}
 
 	function getDate() {
