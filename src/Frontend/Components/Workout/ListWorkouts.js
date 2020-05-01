@@ -9,6 +9,7 @@ export default function ListWorkouts() {
 	const [ rep, setRep ] = useState();
 	const [ weight,setWeight ] = useState();
 	const [ num, setNum ] = useState(1);
+	const [ obj, setObj ] = useState([]);
 
 	function handleInput(e, index) {
 		if(e && index === 1) {
@@ -34,6 +35,10 @@ export default function ListWorkouts() {
 		}
 	}
 
+	function finishExercise() {
+
+	}
+
 	return (
 		<div className='section'>
 			<form className='select-exercise'>
@@ -55,6 +60,7 @@ export default function ListWorkouts() {
 				</form>
 			</div>
 			<button onClick={() => addRep()}>Add new set</button>
+			<button onClick={() => finishExercise()}>Finish Exercise</button>
 		</div >
 	);
 }
