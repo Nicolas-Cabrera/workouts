@@ -35,7 +35,7 @@ export default function ListWorkouts() {
 	}
 
 	return (
-		<div>
+		<div className='section'>
 			<form className='select-exercise'>
 				<select>
 					<option>test for muscle workout</option>

@@ -70,12 +70,11 @@ export default function Workout() {
 					<h1>Record Workout</h1>
 				</div>
 				<div className='workout-section'>
-					<div className='workout-block'>
+					<div>
 						<div className='workouts-top'>
 							<h2 className='selected-muscle'>{muscle}</h2>
 							<h6 className='date'>{getDate()}</h6>
 						</div>
-						{/* <ListWorkouts /> */}
 						{
 							listWorkout.map((a, index) => (
 								<React.Fragment key={index}>

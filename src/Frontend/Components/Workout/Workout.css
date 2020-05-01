@@ -13,10 +13,6 @@ h2 {
 	padding: 15px 0;
 }
 
-.workout-block {
-	border: 1px solid black;
-}
-
 .workout-section {
 	overflow: scroll;
 	background-color: white;
@@ -84,4 +80,8 @@ h2 {
 .list {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 	padding: 5px 0;
+}
+
+.section {
+	border: 1px solid rgb(0, 0, 0);
 }
