@@ -36,7 +36,10 @@ export default function ListWorkouts() {
 	}
 
 	function finishExercise() {
-
+		// if(weighthistory.length > 3 && rephistory.length > 3) {
+		// 	setObj([{"Exercise": "Bench Press", "Weight":weight, "Reps":rep}])
+		// 	console.log(obj);
+		// }
 	}
 
 	return (
