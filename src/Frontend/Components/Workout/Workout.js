@@ -25,7 +25,6 @@ export default function Workout() {
 	function AddNewExercise() {
 		let item = <ListWorkouts />;
 		setListWorkout([...listWorkout, item]);
-		console.log(listWorkout);
 	}
 
 	function getDate() {
