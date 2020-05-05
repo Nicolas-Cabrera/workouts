@@ -37,7 +37,9 @@ export default function ListWorkouts() {
 	}
 
 	function finishSet() {
-		setFinish(true);
+		if(rephistory.length > 2 && weighthistory.length > 2) {
+			setFinish(true);
+		}
 	}
 
 	if (!finish) {
