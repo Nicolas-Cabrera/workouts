@@ -35,13 +35,6 @@ export default function ListWorkouts() {
 		}
 	}
 
-	function finishExercise() {
-		// if(weighthistory.length > 3 && rephistory.length > 3) {
-		// 	setObj([{"Exercise": "Bench Press", "Weight":weight, "Reps":rep}])
-		// 	console.log(obj);
-		// }
-	}
-
 	return (
 		<div className='section'>
 			<form className='select-exercise'>
@@ -63,7 +56,6 @@ export default function ListWorkouts() {
 				</form>
 			</div>
 			<button onClick={() => addRep()}>Add new set</button>
-			<button onClick={() => finishExercise()}>Finish Exercise</button>
 		</div >
 	);
 }
