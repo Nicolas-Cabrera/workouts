@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ListSets from './ListSets';
 
-export default function ListWorkouts() {
+export default function ListWorkouts(props) {
 
 	const [weighthistory, setWeightHistory] = useState([]);
 	const [rephistory, setRepHistory] = useState([]);
@@ -11,6 +11,16 @@ export default function ListWorkouts() {
 	const [weight, setWeight] = useState();
 	const [num, setNum] = useState(1);
 	const [obj, setObj] = useState([]);
+	const [exercises, setExercises] = useState();
+	const muscle = localStorage.getItem('muscle');
+
+	useEffect(() => {
+		fetch('/rest/workouts')
+			.then(res => res.json())
+			.then(response => {
+				setExercises(response.filter((a) => a[muscle]))
+			});
+	}, [muscle]);
 
 	function handleInput(e, index) {
 		if (e && index === 1) {
@@ -42,11 +52,16 @@ export default function ListWorkouts() {
 		}
 	}
 
+	console.log(exercises);
+
 	if (!finish) {
 		return (
 			<div className='section'>
 				<form className='select-exercise'>
 					<select>
+						{/* {
+							exercises.map((a, index) => <option key={index}>{a.name}</option> )
+						} */}
 						<option>test for muscle workout</option>
 					</select>
 				</form>

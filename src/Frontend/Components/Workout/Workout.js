@@ -8,7 +8,6 @@ export default function Workout() {
 	const [show, setShow] = useState(true);
 	const [workouts, setWorkouts] = useState();
 	const [muscle, setMuscle] = useState();
-	const [exercises, setExercises] = useState();
  	const [listWorkout, setListWorkout] = useState([<ListWorkouts />]);
 
 	useEffect(() => {
@@ -16,7 +15,6 @@ export default function Workout() {
 			.then(res => res.json())
 			.then(response => {
 				setWorkouts(response.map((a) => Object.keys(a)))
-				setExercises(response.filter((a) => a[muscle]));
 			});
 	}, [muscle]);
 
@@ -25,7 +23,7 @@ export default function Workout() {
 	}
 
 	function AddNewExercise() {
-		let item = <ListWorkouts />;
+		let item = <ListWorkouts muscle={muscle}/>;
 		setListWorkout([...listWorkout, item]);
 	}
 
@@ -40,9 +38,8 @@ export default function Workout() {
 
 	function setMuscleGroup(e) {
 		setMuscle(e.target.value);
+		localStorage.setItem('muscle', e.target.value);
 	}
-
-	console.log('Exercises are: ', exercises);
 
 	if (show && workouts) {
 		return (
@@ -80,7 +77,7 @@ export default function Workout() {
 						</div>
 						{
 							listWorkout.map((a, index) => (
-								<React.Fragment key={index}>
+								<React.Fragment key={index} >
 									{a}
 								</React.Fragment>
 							))
