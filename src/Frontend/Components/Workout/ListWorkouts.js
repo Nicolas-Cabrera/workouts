@@ -18,8 +18,9 @@ export default function ListWorkouts(props) {
 		fetch('/rest/workouts')
 			.then(res => res.json())
 			.then(response => {
-				setExercises(response.filter((a) => a[muscle]))
-			});
+				let res = response.filter((a) => a[muscle])
+				setExercises(res[0][muscle])
+			})
 	}, [muscle]);
 
 	function handleInput(e, index) {
@@ -52,17 +53,15 @@ export default function ListWorkouts(props) {
 		}
 	}
 
-	console.log(exercises);
-
-	if (!finish) {
+	if (!finish && exercises) {
 		return (
 			<div className='section'>
 				<form className='select-exercise'>
 					<select>
-						{/* {
+						{
 							exercises.map((a, index) => <option key={index}>{a.name}</option> )
-						} */}
-						<option>test for muscle workout</option>
+						}
+						{/* <option>test for muscle workout</option> */}
 					</select>
 				</form>
 				<div className='headers'>
