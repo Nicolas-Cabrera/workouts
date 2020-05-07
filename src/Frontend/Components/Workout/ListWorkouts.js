@@ -61,7 +61,6 @@ export default function ListWorkouts(props) {
 						{
 							exercises.map((a, index) => <option key={index}>{a.name}</option> )
 						}
-						{/* <option>test for muscle workout</option> */}
 					</select>
 				</form>
 				<div className='headers'>
