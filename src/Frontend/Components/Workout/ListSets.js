@@ -15,9 +15,7 @@ export default function ListSets(props) {
 			<span>{item}</span>
 		</div>
 	});
-
-	//const obj = [{"Weight":weight, "Reps":rep}];
-
+	
 	return <div className='history'>
 		<div>{listWeight}</div>
 		<div>{listRep}</div>

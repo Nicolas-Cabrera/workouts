@@ -12,6 +12,7 @@ export default function ListWorkouts(props) {
 	const [num, setNum] = useState(1);
 	const [obj, setObj] = useState([]);
 	const [exercises, setExercises] = useState();
+	const [exerciseOption, setExerciseOption] = useState();
 	const muscle = localStorage.getItem('muscle');
 
 	useEffect(() => {
@@ -47,9 +48,17 @@ export default function ListWorkouts(props) {
 		}
 	}
 
+	function setExercise(e) {
+		setExerciseOption(e.target.value);
+
+	}
+
 	function finishSet() {
 		if(rephistory.length > 2 && weighthistory.length > 2) {
 			setFinish(true);
+			setObj([{"Weight": rephistory, "Reps": weighthistory, "exercise": exerciseOption}]);
+			setFullWorkout([...fullWorkout, obj]);
+			console.log(fullWorkout);
 		}
 	}
 
@@ -57,7 +66,7 @@ export default function ListWorkouts(props) {
 		return (
 			<div className='section'>
 				<form className='select-exercise'>
-					<select>
+					<select onChange={(e) => setExercise(e)}>
 						{
 							exercises.map((a, index) => <option key={index}>{a.name}</option> )
 						}
