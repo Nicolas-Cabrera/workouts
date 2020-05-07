@@ -49,18 +49,18 @@ export default function ListWorkouts(props) {
 
 	function setExercise(e) {
 		setExerciseOption(e.target.value);
-
 	}
 
 	function finishSet() {
-		if(rephistory.length > 2 && weighthistory.length > 2) {
+		if(rephistory.length > 0 && weighthistory.length > 0) {
 			setFinish(true);
-			let object = {"Weight": rephistory, "Reps": weighthistory, "exercise": exerciseOption};
-			const sets = [...fullWorkout, object];
-			setFullWorkout(sets);
-			console.log(fullWorkout);
+			let object = 'tEST';//{"Weight": rephistory, "Reps": weighthistory, "exercise": exerciseOption};
+			const newSet = [...fullWorkout, object];
+			setFullWorkout(newSet);
 		}
 	}
+
+	console.log(fullWorkout);
 
 	if (!finish && exercises) {
 		return (
