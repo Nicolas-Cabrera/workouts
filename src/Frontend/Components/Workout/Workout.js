@@ -83,7 +83,7 @@ export default function Workout() {
 							))
 						}
 					</div>
-					{/* <button onClick={() => AddNewExercise()}>Add New Exercise</button> */}
+					<button onClick={() => AddNewExercise()}>Add New Exercise</button>
 					<button>Finish Workout</button>
 				</div>
 			</div>
