@@ -23,7 +23,7 @@ export default function Workout() {
 	}
 
 	function AddNewExercise() {
-		let item = <ListWorkouts muscle={muscle}/>;
+		let item = <ListWorkouts />;
 		setListWorkout([...listWorkout, item]);
 	}
 

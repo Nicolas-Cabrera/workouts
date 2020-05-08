@@ -5,13 +5,13 @@ export default function ListWorkouts(props) {
 
 	const [weighthistory, setWeightHistory] = useState([]);
 	const [rephistory, setRepHistory] = useState([]);
-	const [fullWorkout, setFullWorkout] = useState([]);
 	const [finish, setFinish] = useState(false);
 	const [rep, setRep] = useState();
 	const [weight, setWeight] = useState();
 	const [num, setNum] = useState(1);
 	const [exercises, setExercises] = useState();
 	const [exerciseOption, setExerciseOption] = useState();
+	const [fullWorkout, setFullWorkout] = useState([]);
 	const muscle = localStorage.getItem('muscle');
 
 	useEffect(() => {
@@ -54,7 +54,7 @@ export default function ListWorkouts(props) {
 	function finishSet() {
 		if(rephistory.length > 0 && weighthistory.length > 0) {
 			setFinish(true);
-			let object = 'tEST';//{"Weight": rephistory, "Reps": weighthistory, "exercise": exerciseOption};
+			const object = 54;// {"Weight": rephistory, "Reps": weighthistory, "exercise": exerciseOption};
 			const newSet = [...fullWorkout, object];
 			setFullWorkout(newSet);
 		}
