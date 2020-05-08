@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ListSets from './ListSets';
 
-export default function ListWorkouts(props) {
+export default function ListWorkouts() {
 
 	const [weighthistory, setWeightHistory] = useState([]);
 	const [rephistory, setRepHistory] = useState([]);
