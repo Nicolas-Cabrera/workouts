@@ -7,6 +7,7 @@ import Register from './Components/Register/Register';
 import Main from './Components/Main/Main';
 import Workouts from './Components/Exercise/Workouts';
 import Muscle from './Components/Exercise/Muscle';
+import Progress from './Components/Progress/Progress';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
 					<Route exact path='/Main' component={Main} /> 
 					<Route exact path='/Workouts' component={Workouts} />
 					<Route exact path='/Muscle' component={Muscle} />
-				</div>
+					<Route exact path='/Progress' component={Progress} />
+				</div> 
 			</Switch>
 		</Router>
 	);

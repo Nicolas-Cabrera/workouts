@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Profile.css';
 import usericon from '../../img/user.png';
 import progress from '../../img/progress.png';
@@ -38,7 +39,7 @@ export default function Profile() {
 						<h4>{user.weight} kg</h4>
 					</div>
 				</div>
-				<button className='progress'><img className='progress-image' src={progress} alt='progress' />Progress</button>
+				<Link to='/Progress' className='progress'><img className='progress-image' src={progress} alt='progress' />Progress</Link>
 				<form method='POST' action='/logout'>
 					<input className='logout' type='submit' value='Logout'></input>
 				</form>
