@@ -3,10 +3,11 @@ import './Progress.css';
 
 export default function Progress() {
 
-	const [ days, setDays ] = useState([]);
+	const [ dates, setDates ] = useState([]);
+	const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-	for(let day = 1; day <= 31; day ++) {
-		days.push(day);
+	for(let date = 1; date <= 31; date ++) {
+		dates.push(date);
 	}
 
 	return (
@@ -14,7 +15,12 @@ export default function Progress() {
 			<p>This is the progress component</p>
 			<div className='days'>
 				{
-					days.map((a) => <div>{a}</div>)	
+					days.map((a) => <div>{a}</div>)
+				}
+			</div>
+			<div className='dates'>
+				{
+					dates.map((a) => <div>{a}</div>)	
 				}
 			</div>
 		</div>
