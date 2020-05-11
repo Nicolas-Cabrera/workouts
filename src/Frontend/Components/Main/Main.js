@@ -74,7 +74,7 @@ export default function Main() {
 							tabs === 'Workout' ? <Workout /> :
 								<Profile />
 				} */}
-				<Workout />
+				<Profile />
 			</div>
 			<div className='bottom-menu'>
 				<ul>
