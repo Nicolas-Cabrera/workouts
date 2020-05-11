@@ -54,13 +54,11 @@ export default function ListWorkouts() {
 	function finishSet() {
 		if(rephistory.length > 0 && weighthistory.length > 0) {
 			setFinish(true);
-			const object = 54;// {"Weight": rephistory, "Reps": weighthistory, "exercise": exerciseOption};
+			const object = 65;//{rephistory, weighthistory, exerciseOption};
 			const newSet = [...fullWorkout, object];
 			setFullWorkout(newSet);
 		}
 	}
-
-	console.log(fullWorkout);
 
 	if (!finish && exercises) {
 		return (

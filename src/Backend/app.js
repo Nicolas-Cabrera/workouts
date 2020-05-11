@@ -32,13 +32,14 @@ app.get('/rest/workouts', (req, res) => {
 	res.send(workouts());
 })
 
+app.get('/', (req, res) => {
+	res.send('Hello welcome to the backend of this app');
+});
+
+
 db.connect().then(dbo => {
 
 	app.use(express.static(path.join(__dirname, '../../build')));
-
-	app.get('/', (req, res) => {
-		res.send('Hello welcome to the backend of this app');
-	});
 
 	app.post('/login', (req, res, next) => {
 		dbo.collection('PersonalData').find({
