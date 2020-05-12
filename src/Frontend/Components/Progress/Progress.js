@@ -21,8 +21,10 @@ export default function Progress() {
 	}
 
 	function startMonthFrom() {
-		let firstDay = new Date(2020, 1, 1).getDay();
-		
+		let firstDay = new Date(2020, month, 1).getDay();
+		if(firstDay === 0) {
+			firstDay = 7;
+		}
 		for(let start = 1; start <= firstDay; start ++) {
 			starts.push(start);
 		}
