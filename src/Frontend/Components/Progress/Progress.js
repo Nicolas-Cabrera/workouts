@@ -34,10 +34,10 @@ export default function Progress() {
 		}
 
 		const zeros = starts.splice(1).map((a) => a * 0);
-
 		const final = zeros.concat(dates);
-		return final.map((a, i) => <div key={i}>{a}</div>)
-		//console.log(final);
+		return final.map((a, i) => (
+			a === 0 ? <div key={i}></div> : <div key={i}>{a}</div>
+		))
 	}
 
 	return (
