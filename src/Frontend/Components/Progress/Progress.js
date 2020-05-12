@@ -43,7 +43,7 @@ export default function Progress() {
 		const zeros = starts.splice(1).map((a) => a * 0);
 		const final = zeros.concat(dates);
 		return final.map((a, i) => (
-			a === 0 ? <div key={i}></div> : <div key={i}>{a}</div>
+			a === 0 ? <div key={i} className='dates-mapped'></div> : <div key={i} className='dates-mapped'>{a}</div>
 		))
 	}
 
@@ -53,10 +53,10 @@ export default function Progress() {
 				<button className='back-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
 				<h2>Calendar</h2>
 			</div>
-			<p>{getDate()}</p>
+			<h2 className='current-date'>{getDate()}</h2>
 			<div className='days'>
 				{
-					days.map((a, i) => <div key={i}>{a}</div>)
+					days.map((a, i) => <h4 key={i}>{a}</h4>)
 				}
 			</div>
 			<div className='dates'>

@@ -3,7 +3,11 @@
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	background-color: #2b324c;
 	color: white;
-	padding: 10px;
+	padding: 10px 50px;
+}
+
+.current-date {
+	margin: 20px 20px;
 }
 
 h2{
@@ -27,4 +31,8 @@ h2{
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: repeat(5, 1fr);
+}
+
+.dates-mapped {
+	padding: 20px 0;
 }
