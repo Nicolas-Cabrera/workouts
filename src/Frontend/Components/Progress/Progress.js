@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Progress.css';
+import { useHistory } from 'react-router';
+import back from '../../img/back.png';
 
 export default function Progress() {
 
@@ -8,6 +10,11 @@ export default function Progress() {
 	const date = new Date();
 	const month = date.getMonth();
 	const starts = [];
+	const history = useHistory();
+
+	function goBackHandler() {
+		history.goBack();
+	}
 
 	var getDaysInMonth = function(month, year) {
 	   return new Date(year, month, 0).getDate();
@@ -42,6 +49,10 @@ export default function Progress() {
 
 	return (
 		<div>
+			<div className='calendar-title'>
+				<button className='back-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
+				<h2>Calendar</h2>
+			</div>
 			<p>{getDate()}</p>
 			<div className='days'>
 				{
