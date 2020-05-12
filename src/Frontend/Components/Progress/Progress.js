@@ -8,9 +8,8 @@ export default function Progress() {
 	const date = new Date();
 	const month = date.getMonth();
 	const starts = [];
-	const [ finalMonth, setFinalMonth ] = useState([]);
 
-	var getDaysInMonth = function(month,year) {
+	var getDaysInMonth = function(month, year) {
 	   return new Date(year, month, 0).getDate();
 	  };
 
@@ -21,25 +20,22 @@ export default function Progress() {
 		return `${day} ${months[month]} ${year}`;
 	}
 
-	function setMonth() {
-		let firstDay = new Date(2020, month, 1).getDay();
+	function startMonthFrom() {
+		let firstDay = new Date(2020, 1, 1).getDay();
+		
 		for(let start = 1; start <= firstDay; start ++) {
 			starts.push(start);
 		}
-		const zeros = starts.map((a) => a * 0);
 
 		for(let date = 1; date <= getDaysInMonth(month, 2020); date ++) {
 			dates.push(date);
 		}
-		const final = zeros.concat(dates);
-		// setFinalMonth(final);
-	}
 
-	function startMonthFrom() {
-		setMonth();
-		// setDates(zeros.concat(dates));
-		//return dates.map((a, i) => <div key={i}>{a}</div>)
-		return <div>Test</div>	
+		const zeros = starts.splice(1).map((a) => a * 0);
+
+		const final = zeros.concat(dates);
+		return final.map((a, i) => <div key={i}>{a}</div>)
+		//console.log(final);
 	}
 
 	return (
