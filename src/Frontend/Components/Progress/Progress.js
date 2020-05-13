@@ -44,7 +44,7 @@ export default function Progress() {
 		const zeros = starts.splice(1).map((a) => a * 0);
 		const final = zeros.concat(dates);
 		return final.map((a, i) => (
-			a === 0 ? <div key={i} className='dates-mapped'></div> : <Link to='' key={i} className='dates-mapped'>{a}</Link >
+			a === 0 ? <div key={i} className='dates-mapped'></div> : <Link to='ProgressHistory' key={i} className='dates-mapped'>{a}</Link >
 		))
 	}
 

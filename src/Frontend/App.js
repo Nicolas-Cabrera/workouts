@@ -8,6 +8,7 @@ import Main from './Components/Main/Main';
 import Workouts from './Components/Exercise/Workouts';
 import Muscle from './Components/Exercise/Muscle';
 import Progress from './Components/Progress/Progress';
+import ProgressHistory from './Components/Progress/ProgressHistory';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 					<Route exact path='/Workouts' component={Workouts} />
 					<Route exact path='/Muscle' component={Muscle} />
 					<Route exact path='/Progress' component={Progress} />
+					<Route exact path='/ProgressHistory' component={ProgressHistory} />
 				</div> 
 			</Switch>
 		</Router>
