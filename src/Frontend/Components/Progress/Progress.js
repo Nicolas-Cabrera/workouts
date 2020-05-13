@@ -1,6 +1,7 @@
 import React from 'react';
 import './Progress.css';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import back from '../../img/back.png';
 
 export default function Progress() {
@@ -43,7 +44,7 @@ export default function Progress() {
 		const zeros = starts.splice(1).map((a) => a * 0);
 		const final = zeros.concat(dates);
 		return final.map((a, i) => (
-			a === 0 ? <div key={i} className='dates-mapped'></div> : <div key={i} className='dates-mapped'>{a}</div>
+			a === 0 ? <div key={i} className='dates-mapped'></div> : <Link to='' key={i} className='dates-mapped'>{a}</Link >
 		))
 	}
 
