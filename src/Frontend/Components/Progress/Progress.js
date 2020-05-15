@@ -9,6 +9,7 @@ export default function Progress() {
 	const dates = [];
 	const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 	const date = new Date();
+	const day = date.getDate();
 	const month = date.getMonth();
 	const year = date.getFullYear();
 	const starts = [];
@@ -24,7 +25,6 @@ export default function Progress() {
 
 	function getDate() {
 		let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Sept', 'Oct', 'Nov', 'Dec'];
-		let day = date.getDate();
 		return `${day} ${months[month]} ${year}`;
 	}
 
@@ -47,7 +47,7 @@ export default function Progress() {
 			a === 0 ? 
 				<div key={i} className='dates-mapped'></div> : 
 					<Link to={{ pathname: '/ProgressHistory', state:{date: a, month: month, year: year }}} 
-						key={i} className='dates-mapped'>{a}</Link >
+						key={i} className={a === day ? 'dates-mapped current' : 'dates-mapped'}>{a}</Link >
 		))
 	}
 
