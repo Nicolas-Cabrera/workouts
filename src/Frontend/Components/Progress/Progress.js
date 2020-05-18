@@ -57,7 +57,10 @@ export default function Progress() {
 				<button className='back-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
 				<h2>Calendar</h2>
 			</div>
-			<h2 className='current-date'>{getDate()}</h2>
+			<div>
+				<button className='back-button'><img src={back} alt='back' /></button>
+				<h2 className='current-date'>{getDate()}</h2>
+			</div>
 			<div className='days'>
 				{
 					days.map((a, i) => <h4 key={i}>{a}</h4>)
