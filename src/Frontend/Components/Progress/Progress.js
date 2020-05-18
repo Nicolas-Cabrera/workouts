@@ -53,6 +53,15 @@ export default function Progress() {
 		))
 	}
 
+	function setMonth(e, dir) {
+		console.log(dir);
+		// if(e.target.value === '') {
+		// 	console.log('Left');
+		// } else {
+		// 	console.log('Right');
+		// }
+	}
+
 	return (
 		<div>
 			<div className='calendar-title'>
@@ -60,9 +69,9 @@ export default function Progress() {
 				<h2>Calendar</h2>
 			</div>
 			<div className='date-arrows'>
-				<button><img src={leftarrow} alt='back' /></button>
+				<button><img src={leftarrow} alt='back' onClick={(e) => setMonth(e, 'left')} /></button>
 				<h2 className='current-date'>{getDate()}</h2>
-				<button><img src={rightarrow} alt='back' /></button>
+				<button><img src={rightarrow} alt='back' onClick={(e) => setMonth(e, 'right')} /></button>
 			</div>
 			<div className='days'>
 				{
