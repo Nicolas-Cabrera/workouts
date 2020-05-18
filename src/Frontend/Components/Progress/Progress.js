@@ -3,6 +3,8 @@ import './Progress.css';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import back from '../../img/back.png';
+import leftarrow from '../../img/leftarrow.png';
+import rightarrow from '../../img/rightarrow.png';
 
 export default function Progress() {
 
@@ -57,9 +59,10 @@ export default function Progress() {
 				<button className='back-button'><img src={back} alt='back' onClick={goBackHandler}/></button>
 				<h2>Calendar</h2>
 			</div>
-			<div>
-				<button className='back-button'><img src={back} alt='back' /></button>
+			<div className='date-arrows'>
+				<button><img src={leftarrow} alt='back' /></button>
 				<h2 className='current-date'>{getDate()}</h2>
+				<button><img src={rightarrow} alt='back' /></button>
 			</div>
 			<div className='days'>
 				{
