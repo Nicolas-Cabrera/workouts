@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Progress.css';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,8 @@ export default function Progress() {
 	const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 	const date = new Date();
 	const day = date.getDate();
-	const month = date.getMonth();
+	//const month = date.getMonth();
+	const [ month, setMonth ] = useState(date.getMonth());
 	const year = date.getFullYear();
 	const starts = [];
 	const history = useHistory();
@@ -53,13 +54,12 @@ export default function Progress() {
 		))
 	}
 
-	function setMonth(e, dir) {
-		console.log(dir);
-		// if(e.target.value === '') {
-		// 	console.log('Left');
-		// } else {
-		// 	console.log('Right');
-		// }
+	function setMonthCalendar(e, dir) {
+		if(dir === 'left') {
+			setMonth(month - 1);
+		} else {
+			setMonth(month + 1);
+		}
 	}
 
 	return (
@@ -69,9 +69,9 @@ export default function Progress() {
 				<h2>Calendar</h2>
 			</div>
 			<div className='date-arrows'>
-				<button><img src={leftarrow} alt='back' onClick={(e) => setMonth(e, 'left')} /></button>
+				<button><img src={leftarrow} alt='back' onClick={(e) => setMonthCalendar(e, 'left')} /></button>
 				<h2 className='current-date'>{getDate()}</h2>
-				<button><img src={rightarrow} alt='back' onClick={(e) => setMonth(e, 'right')} /></button>
+				<button><img src={rightarrow} alt='back' onClick={(e) => setMonthCalendar(e, 'right')} /></button>
 			</div>
 			<div className='days'>
 				{
