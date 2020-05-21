@@ -32,10 +32,6 @@ app.get('/rest/workouts', (req, res) => {
 	res.send(workouts());
 })
 
-app.get('/', (req, res) => {
-	res.send('Hello welcome to the backend of this app');
-});
-
 
 db.connect().then(dbo => {
 
@@ -48,10 +44,10 @@ db.connect().then(dbo => {
 		}).toArray((err, results) => {
 			if (err) throw err;
 			if (results < 1) {
-				return res.redirect(`http://localhost:3000/signinfailed`);
+				return res.redirect(`http://https://recordworkout.herokuapp.com/signinfailed`);
 			} else {
 				req.session.userId = results[0]._id;
-				return res.redirect(`http://localhost:3000/Main`);
+				return res.redirect(`http://https://recordworkout.herokuapp.com/Main`);
 			}
 		});
 	});
@@ -68,7 +64,7 @@ db.connect().then(dbo => {
 	app.post('/formAction', (req, res) => {
 		dbo.collection('PersonalData').insertOne(req.body);	
 		if(req.body) {
-			return res.redirect(`http://localhost:3000/`);
+			return res.redirect(`https://recordworkout.herokuapp.com`);
 		}	
 	});
 
@@ -90,7 +86,7 @@ db.connect().then(dbo => {
 				console.log('There was an error trying to logout');
 			} 
 			res.clearCookie('Session-test');
-			return res.redirect(`http://localhost:3000`);
+			return res.redirect(`https://recordworkout.herokuapp.com`);
 		});
 	});
 
