@@ -12,7 +12,6 @@ export default function Progress() {
 	const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 	const date = new Date();
 	const day = date.getDate();
-	//const month = date.getMonth();
 	const [ month, setMonth ] = useState(date.getMonth());
 	const year = date.getFullYear();
 	const starts = [];
