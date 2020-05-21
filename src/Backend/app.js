@@ -44,10 +44,10 @@ db.connect().then(dbo => {
 		}).toArray((err, results) => {
 			if (err) throw err;
 			if (results < 1) {
-				return res.redirect(`http://https://recordworkout.herokuapp.com/signinfailed`);
+				return res.redirect(`https://recordworkout.herokuapp.com/signinfailed`);
 			} else {
 				req.session.userId = results[0]._id;
-				return res.redirect(`http://https://recordworkout.herokuapp.com/Main`);
+				return res.redirect(`https://recordworkout.herokuapp.com/Main`);
 			}
 		});
 	});
